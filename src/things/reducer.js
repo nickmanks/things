@@ -1,8 +1,11 @@
 import reducer from '../utils/reducer';
 
+import testItems from './test-items';
+
 
 const DefaultState = {
-  items: {}
+  items: testItems,
+  selected: null
 };
 
 
@@ -13,5 +16,9 @@ export default reducer(DefaultState, {
       ...state.items,
       [item.id]: item
     }
+  }),
+  'things/select-item': (state, {id})=> ({
+    ...state,
+    selected: id
   })
 });

@@ -3,6 +3,7 @@ import {createResponsiveStateReducer} from 'redux-responsive';
 import focus from 'refocus/reducer';
 import device from './device-info/reducer';
 import menu from './menu/reducer';
+import things from './things/reducer';
 
 
 const browser = createResponsiveStateReducer(
@@ -13,6 +14,7 @@ export default combineReducers({
   focus,
   browser,
   device,
-  menu
+  menu,
+  things
   // ... add more reducers
 });

@@ -1,0 +1,42 @@
+
+.app-bar-header {
+  display: inline-flex;
+  justify-content: center;
+  padding: 20px 0;
+  position: fixed;
+  background: #fff;
+  z-index: 1040;
+  width: 100%;
+  max-height: 70px;
+  box-shadow: 3px 0 30px rgba(17,31,93,.08), 2px 0 5px rgba(27,27,43,.09);
+}
+
+.app-bar-logo {
+  margin-top: -13px;
+  display: flex;
+}
+
+.app-bar-logo-name {
+  margin-top: 12px;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.app-bar-logo-img {
+  height: 38px;
+  margin-left: 77px;
+  margin-top: 7px;
+}
+
+.app-flex-1 {
+  flex-grow:  1;
+}
+
+.app-flex-2 {
+  flex-grow: 4;
+}
+
+.app-bar-search {
+  margin-left: -67px;
+  margin-top: -10px;
+}

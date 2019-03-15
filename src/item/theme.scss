@@ -1,0 +1,59 @@
+
+.item-header {
+  display: flex;
+}
+
+.item-name-input {
+  max-width: 97%;
+  margin-left: -18px;
+}
+
+.item-time-pill {
+  position: absolute;
+  right: 10px;
+  top: 25px;
+}
+
+.item-status {
+  display: flex;
+  text-align: center;
+}
+
+.item-status-pill {
+  margin: auto;
+  cursor: pointer;
+}
+
+.item {
+  margin-bottom: 25px;
+  height: 320px;
+}
+
+.item-body {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.outline-item {
+  height: 320px;
+  box-shadow: none;
+  border: 2px dashed #69d7a6;
+}
+
+.outline-item-header {
+  background-color: white;
+}
+
+.outline-item-body {
+  margin: auto;
+  text-align: center;
+}
+
+.outline-item-footer {
+  background-color: white;
+}
+
+.outline-button {
+  margin: auto;
+  margin-top: 50%;
+}

@@ -14,7 +14,9 @@
     "homepage": "https://github.com/nickmanks/todo-awesome#readme",
     "bugs": "https://github.com/nickmanks/todo-awesome/issues",
     "devDependencies": {
+        "@fortawesome/fontawesome-svg-core": "1.2.15",
         "@fortawesome/free-solid-svg-icons": "5.7.2",
+        "@fortawesome/react-fontawesome": "0.1.4",
         "@skan-io/babel-config-react": "1.1.1",
         "@skan-io/eslint-config-react": "1.0.2",
         "@skan-io/jest-config-base": "1.0.0",

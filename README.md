@@ -6,7 +6,7 @@
 
   <p align="center">
   <b>
-  :zap: An awesome todo application
+  :white_check_mark: An awesome todo application
   </b>
   </p>
 

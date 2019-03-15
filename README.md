@@ -33,7 +33,7 @@
 
   <p> &nbsp; </p>
 
-  
+
   ## Table of Contents
 
 -   [Security](#security)
@@ -159,7 +159,7 @@ npx run test
 
 You will find code coverage results in `build/cov` including a HTML report:
 ```bash
- open ./build/cov/lcov-report/index.html 
+ open ./build/cov/lcov-report/index.html
 ```
 
 
@@ -190,7 +190,7 @@ where FILE_PATH_TO_MATCH is the path to match (e.g. - app/reducer)
 >```
 
 
-## Documentation
+## Documentation (TODO)
 
 To run the local documentation generator and view the project documentation run:
 
@@ -199,9 +199,6 @@ npx run docs
 ```
 
 Once started, you can view the docs at [http://localhost:undefined](http://localhost:undefined)
-
-See `@skan-io/code-documentation` repo for details on how to document your code
-to work with the generator.
 
 
 ## Contributing
@@ -213,7 +210,7 @@ Pull requests and commits follow commitizen conventional commit guidelines.
 
 ## Maintainers
 
-[@nickmanks](https://github.com/nickmanks) 
+[@nickmanks](https://github.com/nickmanks)
 
 
 Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
@@ -223,4 +220,3 @@ Small note: If editing the README, please conform to the [standard-readme](https
 ## Disclaimer
 
 Any use of this software by any person will incur no liability on the owner of this software.
-

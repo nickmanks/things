@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import diff from 'jest-diff';
 import {shallow} from 'enzyme';
 import {shallowSerialize} from './shallow';
-import {testStore} from '../../helpers';
+import {testStore} from '../../testing/helpers';
 
 const defaultTheme = {
   componentOne: 'mock-componentOne',
@@ -145,20 +145,18 @@ describe('shallowSerialize', ()=> {
       stringProp: PropTypes.string
     };
 
-    const mapStateToProps = ({user})=> ({
-      stringProp: user.sub
+    const mapStateToProps = ({focus})=> ({
+      stringProp: focus.element
     });
 
     const ConnectedComponent = connect(mapStateToProps)(SimpleComponent);
 
     it('renders properly', ()=> {
-      const store = testStore({
-        user: {sub: 'test-string'}
-      });
+      const store = testStore();
       const testWrapper = shallow(<ConnectedComponent store={store} />);
 
       expect(shallowSerialize(testWrapper)).toMatchTrimmed(`
-<SimpleComponent store={{"nextDispatch":{}}} stringProp={"test-string"} dispatch={"function"} storeSubscription={{"store":{"nextDispatch":{}},"listeners":{}}}>
+<SimpleComponent store={{"nextDispatch":{}}} stringProp={null} dispatch={"function"} storeSubscription={{"store":{"nextDispatch":{}},"listeners":{}}}>
   <div>
     Testing
   </div>
@@ -167,9 +165,7 @@ describe('shallowSerialize', ()=> {
     });
 
     it('strips the provider', ()=> {
-      const store = testStore({
-        user: {sub: 'test-string'}
-      });
+      const store = testStore();
       const testWrapper = shallow(
         <Provider store={store}>
           <ConnectedComponent store={store} />
@@ -177,7 +173,7 @@ describe('shallowSerialize', ()=> {
       );
 
       expect(shallowSerialize(testWrapper)).toMatchTrimmed(`
-<SimpleComponent store={{"nextDispatch":{}}} stringProp={"test-string"} dispatch={"function"} storeSubscription={{"store":{"nextDispatch":{}},"listeners":{}}}>
+<SimpleComponent store={{"nextDispatch":{}}} stringProp={null} dispatch={"function"} storeSubscription={{"store":{"nextDispatch":{}},"listeners":{}}}>
   <div>
     Testing
   </div>

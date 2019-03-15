@@ -15,7 +15,8 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/src/testing/setup-framework.js'],
 
   moduleNameMapper: {
-    '^.*\.scss$': '<rootDir>/src/testing/mock-scss.js'
+    '^.*\.scss$': '<rootDir>/src/testing/mock-scss.js',
+    '^.*\.css$': '<rootDir>/src/testing/mock-css.js'
   },
 
   transform: {
@@ -33,7 +34,7 @@ module.exports = {
   },
 
   snapshotSerializers: [
-    '<rootDir>/src/testing/snapshots/serializer'
+    '<rootDir>/src/snapshots/serializer'
   ],
 
   collectCoverage: true,

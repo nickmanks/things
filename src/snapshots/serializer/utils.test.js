@@ -64,6 +64,6 @@ describe('extractTypeName', ()=> {
 
   it('returns React.Memo for a memo component', ()=> {
     // TODO fix this test should expect React.Memo
-    expect(extractTypeName({type: MemoTestComponent})).toEqual('Component');
+    expect(extractTypeName({type: MemoTestComponent})).toEqual('React.Memo');
   });
 });

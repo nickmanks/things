@@ -29,5 +29,6 @@ export default (storybookBaseConfig)=> {
     ...storybookBaseConfig.resolve.alias,
     fs: resolve(__dirname, 'fs-mock.js')
   };
+
   return storybookBaseConfig;
 };

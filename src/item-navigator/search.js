@@ -2,7 +2,7 @@ import {SORT_NEWEST, SORT_OLDEST, SORT_STATUS} from '../app-bar/sort';
 
 
 // eslint-disable-next-line max-statements
-export const findItems = (searchTerm)=> (item)=> {
+export const scoreItems = (searchTerm)=> (item)=> {
   if (!searchTerm) {
     return {item, score: 1};
   }
@@ -21,6 +21,7 @@ export const findItems = (searchTerm)=> (item)=> {
   if (item.description.toLowerCase().includes(search)) {
     return {item, score: 1};
   }
+
   return {item, score: -1};
 };
 
@@ -28,9 +29,11 @@ export const sortItems = (sortType)=> {
   if (sortType === SORT_NEWEST) {
     return (a, b)=> b.item.created - a.item.created;
   }
+
   if (sortType === SORT_OLDEST) {
     return (a, b)=> a.item.created - b.item.created;
   }
+
   if (sortType === SORT_STATUS) {
     return (a, b)=> {
       if (a.item.status === 'done') {
@@ -45,8 +48,10 @@ export const sortItems = (sortType)=> {
       if (a.item.status === 'ready' && b.item.status === 'in progress') {
         return 1;
       }
+
       return 1;
     };
   }
+  
   return (a, b)=> b.score - a.score;
 };

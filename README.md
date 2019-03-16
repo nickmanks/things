@@ -1,12 +1,12 @@
 
   <p align="center"><img src='./src/favicon.png' height='140' /></p>
   <p align="center">
-    <b> todo-awesome </b>
+    <b> things </b>
   </p>
 
   <p align="center">
   <b>
-  :white_check_mark: An awesome todo application
+  :zap: Application todo all the things
   </b>
   </p>
 
@@ -36,7 +36,6 @@
 
   ## Table of Contents
 
--   [Security](#security)
 -   [Background](#background)
 -   [Install](#install)
 -   [Usage](#usage)
@@ -45,21 +44,12 @@
 -   [ESLint](#eslint-installation)
 -   [Testing](#running-tests)
 -   [Contributing](#contributing)
--   [Documentation](#documentation)
 -   [App Configuration](#configuration)
 -   [Maintainers](#maintainers)
 -   [Under The Hood](#under-the-hood)
 -   [Disclaimer](#disclaimer)
 -   [License](#license)
 
-
-## Security
-
-Unauthorised access to this repository, any of its contents is prohibited.
-Permission must be explicitly given from a maintainer.
-
-Do not copy or share this repository, its url, or any of its downloadable
-content unless specified by the owner/org/company policy.
 
 ## Install
 
@@ -71,10 +61,9 @@ Clone the repo and install dependencies:
 > nvm use 10
 > ```
 >
-> Make sure to use the latest version of npm and applify:
+> Make sure to use the latest version of npm:
 > ```bash
 > npm i -g npm
-> npm i -g @skan-io/applify
 > ```
 >
 >
@@ -88,8 +77,8 @@ Clone the repo and install dependencies:
 
 
 ```bash
-  git clone git@github.com:nickmanks/todo-awesome.git
-  cd todo-awesome
+  git clone git@github.com:nickmanks/things.git
+  cd things
   npm ci
   npx run
 ```
@@ -103,11 +92,11 @@ npx run
 ```
 
 >This will run both `webpack` and `storybook` servers.
->Application can be viewed on `localhost:8080`
->Storybook stories can be viewed at `localhost:8000`
+>Application can be viewed on [`localhost:8080/todo/`](http:localhost:8080/todo/).
+>Storybook stories can be viewed at [`localhost:8080/stories/`](http:localhost:8080/stories/)
 
 This runs [webpack's dev server](https://webpack.js.org/configuration/dev-server/)
-with live reloading enabled. You can find it's configuration in [webpack.config.babel.js](./webpack.config.babel.js).
+with live reloading enabled. You can find it's configuration in [webpack.config.babel.js](./webpack.config.babel.js).  Package scripts can be found in [scripts](./scripts/index.js).
 
 Note: If you need to start a dev server supporting all production browsers (last 2 versions,not IE < 11)
 please run `npx run config --node-env=production`.
@@ -188,17 +177,6 @@ where FILE_PATH_TO_MATCH is the path to match (e.g. - app/reducer)
 >```bash
 >npx run jest src\\app\\reducer.test.js
 >```
-
-
-## Documentation (TODO)
-
-To run the local documentation generator and view the project documentation run:
-
-```bash
-npx run docs
-```
-
-Once started, you can view the docs at [http://localhost:undefined](http://localhost:undefined)
 
 
 ## Contributing

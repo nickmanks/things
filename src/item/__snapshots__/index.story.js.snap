@@ -13,7 +13,7 @@ exports[`Storyshots Connected/Item with done item 1`] = `
               </FormInput>
               <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
                 <span className={"item-time-pill badge badge-secondary badge-pill"}>
-                  3h
+                  NaN days
                 </span>
               </Badge>
             </div>
@@ -73,7 +73,7 @@ exports[`Storyshots Connected/Item with in progress item 1`] = `
               </FormInput>
               <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
                 <span className={"item-time-pill badge badge-secondary badge-pill"}>
-                  3h
+                  NaN days
                 </span>
               </Badge>
             </div>
@@ -133,7 +133,7 @@ exports[`Storyshots Connected/Item with in ready item 1`] = `
               </FormInput>
               <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
                 <span className={"item-time-pill badge badge-secondary badge-pill"}>
-                  3h
+                  NaN days
                 </span>
               </Badge>
             </div>

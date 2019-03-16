@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Connected/EditorModal with no selected item 1`] = `
+<EditorModal store={{}} selected={null} onCloseModal={"function"} onDescriptionChange={"function"} onCategoryChange={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Fragment />
+</EditorModal>
+`;
+
+exports[`Storyshots Connected/EditorModal with selected item 1`] = `
+<EditorModal store={{}} selected={{"id":"test-id-1","name":"Today do things","category":"thing","description":"Nunc quis nisl ac justo elementum sagittis in quis justo.","created":"12m","status":"done"}} onCloseModal={"function"} onDescriptionChange={"function"} onCategoryChange={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Fragment>
+    <Modal size={"lg"} open={true} toggle={"function"} fade={true} backdrop={true} role={"dialog"}>
+      <Fragment>
+        <Transition timeout={150} in={true} appear={true} mountOnEnter={true} unmountOnExit={true} onEntered={"function"} onExit={"function"} onExited={"function"} enter={true} exit={true} onEnter={"function"} onEntering={"function"} onExiting={"function"} />
+        <Transition timeout={150} in={true} appear={true} mountOnEnter={true} unmountOnExit={true} onClick={"function"} onEntered={"function"} onExit={"function"} enter={true} exit={true} onEnter={"function"} onEntering={"function"} onExiting={"function"} onExited={"function"} />
+      </Fragment>
+    </Modal>
+  </Fragment>
+</EditorModal>
+`;

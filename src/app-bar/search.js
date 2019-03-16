@@ -23,7 +23,7 @@ const Search = ({searchValue, updateSearch})=> (
     <FormInput
       className="border-0"
       placeholder="Search..."
-      value={searchValue && searchValue !== '' ? searchValue : ''}
+      value={searchValue ? searchValue : ''}
       onChange={(evt)=> updateSearch(evt.target.value)}
     />
   </InputGroup>

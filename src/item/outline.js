@@ -9,6 +9,7 @@ import {
   Button
 } from 'shards-react';
 import uuidV4 from 'uuid/v4';
+import {now} from '../utils/dates';
 import {updateItem} from '../things/actions';
 import './theme.scss';
 
@@ -19,7 +20,7 @@ const createNewItem = ()=> ({
   description: 'Click to edit my description and category',
   category: 'Category',
   status: 'ready',
-  created: '1m'
+  created: now().getTime()
 });
 
 

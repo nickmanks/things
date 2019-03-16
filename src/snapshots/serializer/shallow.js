@@ -54,14 +54,12 @@ const serializeNode = (node, inner, depth, options)=> {
 const serializeFunctionWrapper = (wrapper, depth, options)=> {
   const node = wrapper.getNodeInternal();
 
-  if (
-    (node.type.contextTypes && node.type.contextTypes.store)
-    || node.type.name === 'Portal'
-  ) {
+  if (node.type.contextTypes || node.type.name === 'Portal') {
     // If we are expecting a store this is a non-root connected component.
     // Just serialize the name. It should be tested independently.
     return serializeNode(node, '', depth, options);
   }
+
   const childWrapper = wrapper.dive();
   const childSerialized = serializeWrapper(childWrapper, depth + 1, options);
   return serializeNode(node, childSerialized, depth, options);

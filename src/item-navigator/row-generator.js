@@ -8,15 +8,6 @@ const NUMBER_OF_COLUMNS = 4;
 
 
 const getColumnItems = (itemA, itemB, itemC, itemD)=> {
-  if (!itemA) {
-    return (
-      <Fragment>
-        <Col>
-          <OutlineItem />
-        </Col>
-      </Fragment>
-    );
-  }
   if (!itemB) {
     return (
       <Fragment>

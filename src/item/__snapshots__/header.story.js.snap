@@ -9,7 +9,7 @@ exports[`Storyshots Simple/ItemHeader with created 1`] = `
       </FormInput>
       <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
         <span className={"item-time-pill badge badge-secondary badge-pill"}>
-          2d
+          NaN days
         </span>
       </Badge>
     </div>
@@ -25,7 +25,9 @@ exports[`Storyshots Simple/ItemHeader with name 1`] = `
         <input value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} className={"item-name-input form-control"} />
       </FormInput>
       <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
-        <span className={"item-time-pill badge badge-secondary badge-pill"} />
+        <span className={"item-time-pill badge badge-secondary badge-pill"}>
+          NaN days
+        </span>
       </Badge>
     </div>
   </div>
@@ -41,7 +43,7 @@ exports[`Storyshots Simple/ItemHeader with name and created 1`] = `
       </FormInput>
       <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
         <span className={"item-time-pill badge badge-secondary badge-pill"}>
-          2d
+          NaN days
         </span>
       </Badge>
     </div>

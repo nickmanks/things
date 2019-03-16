@@ -27,6 +27,7 @@ const SortDropdown = ({open, sortType, onSetSort, setOpen})=> (
     </DropdownToggle>
     <DropdownMenu className={'app-bar-dropdown'}>
       <DropdownItem
+        id='newest'
         className={'flex-dropdown'}
         onClick={
           ()=> onSetSort(sortType === SORT_NEWEST ? null : SORT_NEWEST)
@@ -39,6 +40,7 @@ const SortDropdown = ({open, sortType, onSetSort, setOpen})=> (
         }
       </DropdownItem>
       <DropdownItem
+        id='oldest'
         className={'flex-dropdown'}
         onClick={
           ()=> onSetSort(sortType === SORT_OLDEST ? null : SORT_OLDEST)
@@ -51,6 +53,7 @@ const SortDropdown = ({open, sortType, onSetSort, setOpen})=> (
         }
       </DropdownItem>
       <DropdownItem
+        id='status'
         className={'flex-dropdown'}
         onClick={
           ()=> onSetSort(sortType === SORT_STATUS ? null : SORT_STATUS)

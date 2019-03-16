@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Connected/ItemNavigator with multiple items 1`] = `
+<ItemNavigator store={{}} items={[{"id":"test-id-1","name":"Today do things","category":"thing","description":"Nunc quis nisl ac justo elementum sagittis in quis justo.","created":"12m","status":"done"},{"id":"test-id-2","name":"Thing is due","category":"due","description":"Nunc quis nisl ac justo elementum sagittis in quis justo.","created":"2d","status":"progress"},{"id":"test-id-3","name":"Create a thing","category":"create","description":"Nunc quis nisl ac justo elementum sagittis in quis justo.","created":"3h","status":"ready"},{"id":"test-id-4","name":"Create a thing","category":"create","description":"dadasdasd.","created":"3h","status":"done"}]} selected={null} onCloseModal={"function"} onDescriptionChange={"function"} onCategoryChange={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Fragment>
+    <Container tag={"div"}>
+      <div className={"container"}>
+        <Row tag={"div"} key={"0"}>
+          <div className={"row"}>
+            <Col tag={"div"} breakpoints={["xs","sm","md","lg","xl"]}>
+              <div className={"col"}>
+                <Connect(Item) item={{"id":"test-id-1","name":"Today do things","category":"thing","description":"Nunc quis nisl ac justo elementum sagittis in quis justo.","created":"12m","status":"done"}} />
+              </div>
+            </Col>
+            <Col tag={"div"} breakpoints={["xs","sm","md","lg","xl"]}>
+              <div className={"col"}>
+                <Connect(Item) item={{"id":"test-id-2","name":"Thing is due","category":"due","description":"Nunc quis nisl ac justo elementum sagittis in quis justo.","created":"2d","status":"progress"}} />
+              </div>
+            </Col>
+            <Col tag={"div"} breakpoints={["xs","sm","md","lg","xl"]}>
+              <div className={"col"}>
+                <Connect(Item) item={{"id":"test-id-3","name":"Create a thing","category":"create","description":"Nunc quis nisl ac justo elementum sagittis in quis justo.","created":"3h","status":"ready"}} />
+              </div>
+            </Col>
+            <Col tag={"div"} breakpoints={["xs","sm","md","lg","xl"]}>
+              <div className={"col"}>
+                <Connect(Item) item={{"id":"test-id-4","name":"Create a thing","category":"create","description":"dadasdasd.","created":"3h","status":"done"}} />
+              </div>
+            </Col>
+          </div>
+        </Row>
+        <Row tag={"div"} key={"1"}>
+          <div className={"row"}>
+            <Col tag={"div"} breakpoints={["xs","sm","md","lg","xl"]}>
+              <div className={"col"}>
+                <Connect(OutlineItem) />
+              </div>
+            </Col>
+          </div>
+        </Row>
+      </div>
+    </Container>
+  </Fragment>
+</ItemNavigator>
+`;
+
+exports[`Storyshots Connected/ItemNavigator with no items 1`] = `
+<ItemNavigator store={{}} items={[]} selected={null} onCloseModal={"function"} onDescriptionChange={"function"} onCategoryChange={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Fragment>
+    <Container tag={"div"}>
+      <div className={"container"}>
+        <Row tag={"div"} key={"alone"}>
+          <div className={"row"}>
+            <Col tag={"div"} breakpoints={["xs","sm","md","lg","xl"]}>
+              <div className={"col"}>
+                <Connect(OutlineItem) />
+              </div>
+            </Col>
+          </div>
+        </Row>
+      </div>
+    </Container>
+  </Fragment>
+</ItemNavigator>
+`;

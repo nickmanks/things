@@ -1,6 +1,6 @@
 import {join, format, parse} from 'path';
-import initStoryshots from '@storybook/addon-storyshots';
 import {shallow} from 'enzyme';
+import initStoryshots from '@storybook/addon-storyshots';
 import {Stories2SnapsConverter} from '@storybook/addon-storyshots';
 import serializer from './snapshots/serializer';
 

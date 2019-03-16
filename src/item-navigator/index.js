@@ -3,128 +3,23 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {
   Container,
-  Row,
-  Col,
   Modal,
   ModalBody,
   ModalHeader,
   FormTextarea,
   FormInput
 } from 'shards-react';
-import Item from '../item';
-import OutlineItem from '../item/outline';
+import {getRowItems} from './row-generator';
+import {findItems, sortItems} from './search';
 import {selectItem, updateItem} from '../things/actions';
 
-/* eslint no-magic-numbers: 0 */
 
-
-const getColumnItems = (itemA, itemB, itemC, itemD)=> {
-  if (!itemA) {
-    return (
-      <Fragment>
-        <Col>
-          <OutlineItem />
-        </Col>
-      </Fragment>
-    );
-  }
-  if (!itemB) {
-    return (
-      <Fragment>
-        <Col>
-          <Item item={itemA} />
-        </Col>
-        <Col>
-          <OutlineItem />
-        </Col>
-      </Fragment>
-    );
-  }
-  if (!itemC) {
-    return (
-      <Fragment>
-        <Col>
-          <Item item={itemA} />
-        </Col>
-        <Col>
-          <Item item={itemB} />
-        </Col>
-        <Col>
-          <OutlineItem />
-        </Col>
-      </Fragment>
-    );
-  }
-  if (!itemD) {
-    return (
-      <Fragment>
-        <Col>
-          <Item item={itemA} />
-        </Col>
-        <Col>
-          <Item item={itemB} />
-        </Col>
-        <Col>
-          <Item item={itemC} />
-        </Col>
-        <Col>
-          <OutlineItem />
-        </Col>
-      </Fragment>
-    );
-  }
-
-  return (
-    <Fragment>
-      <Col>
-        <Item item={itemA} />
-      </Col>
-      <Col>
-        <Item item={itemB} />
-      </Col>
-      <Col>
-        <Item item={itemC} />
-      </Col>
-      <Col>
-        <Item item={itemD} />
-      </Col>
-    </Fragment>
-  );
-};
-
-// eslint-disable-next-line max-statements
-const getRowItems = (items)=> {
-  const rows = [];
-
-  const keys = Reflect.ownKeys(items);
-
-  for (let i = 0; i < keys.length; i += 4) {
-    const itemA = items[keys[i]];
-    const itemB = items[keys[i + 1]];
-    const itemC = items[keys[i + 2]];
-    const itemD = items[keys[i + 3]];
-
-    const row = (
-      <Row key={i}>
-        {getColumnItems(itemA, itemB, itemC, itemD)}
-      </Row>
-    );
-
-    rows.push(row);
-
-    if (i >= keys.length - 4 && itemA && itemB && itemC && itemD) {
-      rows.push(
-        <Row key={i + 1}>
-          <Col>
-            <OutlineItem />
-          </Col>
-        </Row>
-      );
-    }
-  }
-
-  return rows;
-};
+const getItems = (items, search, sort)=> Reflect.ownKeys(items)
+  .map((key)=> items[key]) // get items in array form
+  .map(findItems(search)) // map search scores
+  .filter(({score})=> score !== -1) // filter items that contain search term
+  .sort(sortItems(sort)) // sort the items based on score
+  .map(({item})=> item); // return only the items themselves
 
 
 const ItemNavigator = ({
@@ -158,7 +53,7 @@ const ItemNavigator = ({
   </Fragment>
 );
 ItemNavigator.propTypes = {
-  items: PropTypes.object,
+  items: PropTypes.array,
   selected: PropTypes.object,
   onCloseModal: PropTypes.func,
   onDescriptionChange: PropTypes.func,
@@ -167,7 +62,7 @@ ItemNavigator.propTypes = {
 
 
 const mapStateToProps = ({things})=> ({
-  items: things.items,
+  items: getItems(things.items, things.searchValue, things.sortType),
   selected: things.selected ? things.items[things.selected] : null
 });
 

@@ -1,11 +1,12 @@
 import reducer from '../utils/reducer';
 
-import testItems from './test-items';
-
 
 const DefaultState = {
-  items: testItems,
-  selected: null
+  items: {},
+  selected: null,
+  searchValue: null,
+  sortType: null,
+  sortOpen: false
 };
 
 
@@ -17,8 +18,24 @@ export default reducer(DefaultState, {
       [item.id]: item
     }
   }),
+
   'things/select-item': (state, {id})=> ({
     ...state,
     selected: id
+  }),
+
+  'things/set-search-value': (state, {value})=> ({
+    ...state,
+    searchValue: value
+  }),
+
+  'things/set-sort-type': (state, {sortType})=> ({
+    ...state,
+    sortType
+  }),
+
+  'things/set-sort-open': (state, {open})=> ({
+    ...state,
+    sortOpen: open
   })
 });

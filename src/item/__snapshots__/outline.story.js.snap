@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Connected/OutlineItem with New Thing button 1`] = `
+<OutlineItem store={{}} onNewThing={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Card className={"outline-item"} tag={"div"}>
+    <div className={"outline-item card"}>
+      <CardHeader className={"outline-item-header"} tag={"div"}>
+        <div className={"outline-item-header card-header"} />
+      </CardHeader>
+      <CardBody className={"outline-item-body"} tag={"div"}>
+        <div className={"outline-item-body card-body"}>
+          <Button className={"outline-button"} outline={true} pill={true} theme={"success"} onClick={"function"} tag={"button"}>
+            <button type={"button"} onClick={"function"} className={"outline-button btn btn-outline-success btn-pill"}>
+              New Thing
+            </button>
+          </Button>
+        </div>
+      </CardBody>
+      <CardFooter className={"outline-item-footer"} tag={"div"}>
+        <div className={"outline-item-footer card-footer"} />
+      </CardFooter>
+    </div>
+  </Card>
+</OutlineItem>
+`;

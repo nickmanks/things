@@ -3,7 +3,7 @@ import thunkMiddleware from 'redux-thunk';
 import {responsiveStoreEnhancer} from 'redux-responsive';
 import focusEnhancer from 'refocus/enhancer';
 import {window} from './globals';
-import promiseMiddleware from './middlewares/promise';
+import promiseMiddleware from './middleware/promise';
 import reducers from './reducers';
 
 

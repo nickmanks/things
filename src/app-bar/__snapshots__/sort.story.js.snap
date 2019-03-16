@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Connected/Sort open with no sort 1`] = `
+<SortDropdown store={{}} open={true} sortType={null} onSetSort={"function"} setOpen={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Dropdown open={true} toggle={"function"} direction={"down"} nav={false}>
+    <ContextProvider value={{"open":true,"direction":"down","nav":false}}>
+      <Manager tag={"div"}>
+        <ContextProvider value={{}}>
+          <ContextConsumer>
+            <Component />
+          </ContextConsumer>
+        </ContextProvider>
+      </Manager>
+    </ContextProvider>
+  </Dropdown>
+</SortDropdown>
+`;
+
+exports[`Storyshots Connected/Sort open with sort newest 1`] = `
+<SortDropdown store={{}} open={true} sortType={"newest"} onSetSort={"function"} setOpen={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Dropdown open={true} toggle={"function"} direction={"down"} nav={false}>
+    <ContextProvider value={{"open":true,"direction":"down","nav":false}}>
+      <Manager tag={"div"}>
+        <ContextProvider value={{}}>
+          <ContextConsumer>
+            <Component />
+          </ContextConsumer>
+        </ContextProvider>
+      </Manager>
+    </ContextProvider>
+  </Dropdown>
+</SortDropdown>
+`;
+
+exports[`Storyshots Connected/Sort open with sort oldest 1`] = `
+<SortDropdown store={{}} open={true} sortType={"oldest"} onSetSort={"function"} setOpen={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Dropdown open={true} toggle={"function"} direction={"down"} nav={false}>
+    <ContextProvider value={{"open":true,"direction":"down","nav":false}}>
+      <Manager tag={"div"}>
+        <ContextProvider value={{}}>
+          <ContextConsumer>
+            <Component />
+          </ContextConsumer>
+        </ContextProvider>
+      </Manager>
+    </ContextProvider>
+  </Dropdown>
+</SortDropdown>
+`;
+
+exports[`Storyshots Connected/Sort open with sort status 1`] = `
+<SortDropdown store={{}} open={true} sortType={"status"} onSetSort={"function"} setOpen={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Dropdown open={true} toggle={"function"} direction={"down"} nav={false}>
+    <ContextProvider value={{"open":true,"direction":"down","nav":false}}>
+      <Manager tag={"div"}>
+        <ContextProvider value={{}}>
+          <ContextConsumer>
+            <Component />
+          </ContextConsumer>
+        </ContextProvider>
+      </Manager>
+    </ContextProvider>
+  </Dropdown>
+</SortDropdown>
+`;

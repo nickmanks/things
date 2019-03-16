@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Simple/AppBar full app bar 1`] = `
+<header className={"app-bar-header"}>
+  <div className={"app-flex-1"}>
+    <Brand>
+      <a className={"app-bar-logo"}>
+        <img className={"app-bar-logo-img"} src={"favicon.png"} />
+        <h4 className={"app-bar-logo-name"}>
+           things 
+        </h4>
+      </a>
+    </Brand>
+  </div>
+  <div className={"app-flex-2"}>
+    <Connect(Search) />
+  </div>
+  <div className={"app-flex-1"}>
+    <Connect(SortDropdown) />
+  </div>
+</header>
+`;

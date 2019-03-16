@@ -31,4 +31,3 @@ if (STORYBOOK_IMPORT_ENV === 'webpack') {
 }
 
 configure(loadStories, module);
-

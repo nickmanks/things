@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Simple/ItemBody with category 1`] = `
+<CardBody className={"item-body"} onClick={"function"} tag={"div"}>
+  <div onClick={"function"} className={"item-body card-body"}>
+    <CardSubtitle tag={"h6"}>
+      <h6 className={"card-subtitle text-muted"}>
+        Ingredients
+      </h6>
+    </CardSubtitle>
+  </div>
+</CardBody>
+`;
+
+exports[`Storyshots Simple/ItemBody with category and description 1`] = `
+<CardBody className={"item-body"} onClick={"function"} tag={"div"}>
+  <div onClick={"function"} className={"item-body card-body"}>
+    <CardSubtitle tag={"h6"}>
+      <h6 className={"card-subtitle text-muted"}>
+        Ingredients
+      </h6>
+    </CardSubtitle>
+    1x Tomato, 1x Onion
+  </div>
+</CardBody>
+`;
+
+exports[`Storyshots Simple/ItemBody with description 1`] = `
+<CardBody className={"item-body"} onClick={"function"} tag={"div"}>
+  <div onClick={"function"} className={"item-body card-body"}>
+    <CardSubtitle tag={"h6"}>
+      <h6 className={"card-subtitle text-muted"} />
+    </CardSubtitle>
+    This is a new description
+  </div>
+</CardBody>
+`;

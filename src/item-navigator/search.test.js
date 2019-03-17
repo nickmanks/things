@@ -112,8 +112,77 @@ describe('Sorting searched items', ()=> {
       {item: testItems['test-id-1']},
       {item: testItems['test-id-4']},
       {item: testItems['test-id-5']},
+      {item: testItems['test-id-7']},
+      {item: testItems['test-id-2']},
+      {item: testItems['test-id-6']},
+      {item: testItems['test-id-3']}
+    ]);
+  });
+
+  it('correctly sorts based on newest', ()=> {
+    const testItemsArray = Reflect.ownKeys(testItems)
+      .map((key)=> ({item: testItems[key]}));
+
+    const sortFn = sortItems('newest');
+
+    // console.log(testItemsArray.sort(sortFn));
+
+    expect(testItemsArray.sort(sortFn)).toEqual([
+      {item: testItems['test-id-1']},
+      {item: testItems['test-id-2']},
       {item: testItems['test-id-3']},
-      {item: testItems['test-id-2']}
+      {item: testItems['test-id-4']},
+      {item: testItems['test-id-5']},
+      {item: testItems['test-id-6']},
+      {item: testItems['test-id-7']}
+    ]);
+  });
+
+  it('correctly sorts based on oldest', ()=> {
+    const testItemsArray = Reflect.ownKeys(testItems)
+      .map((key)=> ({item: testItems[key]}));
+
+    const sortFn = sortItems('oldest');
+
+    expect(testItemsArray.sort(sortFn)).toEqual([
+      {item: testItems['test-id-4']},
+      {item: testItems['test-id-5']},
+      {item: testItems['test-id-6']},
+      {item: testItems['test-id-7']},
+      {item: testItems['test-id-3']},
+      {item: testItems['test-id-2']},
+      {item: testItems['test-id-1']}
+    ]);
+  });
+
+  it('correctly sorts based on due', ()=> {
+    const testItemsArray = Reflect.ownKeys(testItems)
+      .map((key)=> ({item: testItems[key]}));
+
+    const sortFn = sortItems('due');
+
+    expect(testItemsArray.sort(sortFn)).toEqual([
+      {item: testItems['test-id-4']},
+      {item: testItems['test-id-5']},
+      {item: testItems['test-id-6']},
+      {item: testItems['test-id-7']},
+      {item: testItems['test-id-3']},
+      {item: testItems['test-id-2']},
+      {item: testItems['test-id-1']}
+    ]);
+  });
+
+  it('correctly sorts based on archived date', ()=> {
+    const testItemsArray = Reflect.ownKeys(testItems)
+      .map((key)=> ({item: testItems[key]}))
+      .filter(({item})=> item.archived);
+
+    const sortFn = sortItems('archived');
+
+    expect(testItemsArray.sort(sortFn)).toEqual([
+      {item: testItems['test-id-5']},
+      {item: testItems['test-id-7']},
+      {item: testItems['test-id-6']}
     ]);
   });
 });

@@ -9,7 +9,7 @@ export default {
     category: 'thing',
     description: 'Nunc quis nisl ac justo elementum sagittis in quis justo.',
     created: 10000000,
-    due: 10000000,
+    due: 10000000000000,
     archived: false,
     archivedDate: null,
     status: 'done'
@@ -23,7 +23,7 @@ export default {
     due: 500000,
     archived: false,
     archivedDate: null,
-    status: 'progress'
+    status: 'in progress'
   },
   ['test-id-3']: {
     id: 'test-id-3',
@@ -55,7 +55,29 @@ export default {
     created: 1000,
     due: 1000,
     archived: true,
-    archivedDate: 7000000,
+    archivedDate: 2000000,
     status: 'done'
+  },
+  ['test-id-6']: {
+    id: 'test-id-6',
+    name: 'Create a thing',
+    category: 'create',
+    description: 'dadasdasd.',
+    created: 1000,
+    due: 1000,
+    archived: true,
+    archivedDate: 7000000,
+    status: 'ready'
+  },
+  ['test-id-7']: {
+    id: 'test-id-7',
+    name: 'Create a thing',
+    category: 'create',
+    description: 'dadasdasd.',
+    created: 1000,
+    due: 1000,
+    archived: true,
+    archivedDate: 4000000,
+    status: 'in progress'
   }
 };

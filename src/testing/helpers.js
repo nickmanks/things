@@ -61,28 +61,3 @@ export const testStore = (state={}, middlewares=[])=> {
   storySpies.set(store, capture);
   return store;
 };
-
-
-//  Need to call this any time in the tests where we send text to the search
-//  input box and have to wait for the key debouncer to run.
-export const debounceTimers = ()=> {
-  jest.runAllTimers();
-};
-
-/*
-  Quick and dirty array comparison. Saves using an npm module.
-  Note this doesn't work if the array items are arrays themselves.
- */
-export const arraysAreEqual = (arr1, arr2)=> {
-  const length = arr1.length;
-  if (length !== arr2.length) {
-    return false;
-  }
-
-  for (let i = 0; i < length; i += 1) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};

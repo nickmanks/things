@@ -40,7 +40,8 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.js',
-    '!src/**/*.story.js'
+    '!src/**/*.story.js',
+    '!src/testing/**/*.js'
   ],
   coverageDirectory: './build/cov',
   coverageReporters: ['lcov'],

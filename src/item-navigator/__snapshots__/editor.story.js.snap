@@ -7,7 +7,7 @@ exports[`Storyshots Connected/EditorModal with no selected item 1`] = `
 `;
 
 exports[`Storyshots Connected/EditorModal with selected archived item 1`] = `
-<EditorModal store={{}} selected={{"id":"test-id-5","name":"Create a thing","category":"create","description":"dadasdasd.","created":1000,"due":1000,"archived":true,"archivedDate":7000000,"status":"done"}} onCloseModal={"function"} onDescriptionChange={"function"} onCategoryChange={"function"} onDateChange={"function"} onArchive={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+<EditorModal store={{}} selected={{"id":"test-id-5","name":"Create a thing","category":"create","description":"dadasdasd.","created":1000,"due":1000,"archived":true,"archivedDate":2000000,"status":"done"}} onCloseModal={"function"} onDescriptionChange={"function"} onCategoryChange={"function"} onDateChange={"function"} onArchive={"function"} storeSubscription={{"store":{},"listeners":{}}}>
   <Fragment>
     <Modal size={"lg"} open={true} toggle={"function"} fade={true} backdrop={true} role={"dialog"}>
       <Fragment>
@@ -20,7 +20,7 @@ exports[`Storyshots Connected/EditorModal with selected archived item 1`] = `
 `;
 
 exports[`Storyshots Connected/EditorModal with selected item 1`] = `
-<EditorModal store={{}} selected={{"id":"test-id-1","name":"Today do things","category":"thing","description":"Nunc quis nisl ac justo elementum sagittis in quis justo.","created":10000000,"due":10000000,"archived":false,"archivedDate":null,"status":"done"}} onCloseModal={"function"} onDescriptionChange={"function"} onCategoryChange={"function"} onDateChange={"function"} onArchive={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+<EditorModal store={{}} selected={{"id":"test-id-1","name":"Today do things","category":"thing","description":"Nunc quis nisl ac justo elementum sagittis in quis justo.","created":10000000,"due":10000000000000,"archived":false,"archivedDate":null,"status":"done"}} onCloseModal={"function"} onDescriptionChange={"function"} onCategoryChange={"function"} onDateChange={"function"} onArchive={"function"} storeSubscription={{"store":{},"listeners":{}}}>
   <Fragment>
     <Modal size={"lg"} open={true} toggle={"function"} fade={true} backdrop={true} role={"dialog"}>
       <Fragment>

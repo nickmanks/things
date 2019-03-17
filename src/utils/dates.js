@@ -1,4 +1,4 @@
-import {distanceInWordsStrict, distanceInWords, format} from 'date-fns';
+import {distanceInWordsStrict, distanceInWords} from 'date-fns';
 
 
 export const now = ()=> new Date();
@@ -13,13 +13,7 @@ export const dateDistanceStrict = (date)=> distanceInWordsStrict(
   }
 );
 
-export const dateDistance = (date)=> distanceInWords(
-  // TODO add in some more smarts to differentiate between days, hrs, months
-  date, new Date()
-);
-
-
-export const formatDate = (date)=> format(date, 'DD/MM/YY');
+export const dateDistance = (date)=> distanceInWords(date, new Date());
 
 export const getTimeTo = (date)=> {
   const diff = date.getTime() - new Date().getTime();

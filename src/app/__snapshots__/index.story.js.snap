@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Connected/App with multiple items 1`] = `
+<Fragment>
+  <Connect(AppBar) />
+  <div className={"app-container"}>
+    <Connect(ItemNavigator) />
+  </div>
+</Fragment>
+`;

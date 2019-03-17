@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {Badge} from 'shards-react';
@@ -7,6 +7,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Brand from './brand';
 import Search from './search';
 import SortDropdown from './sort';
+import {isMobile, isTablet} from '../device-info/utils';
 import './theme.scss';
 
 
@@ -23,37 +24,44 @@ const getArchivedCount = (items)=> {
 };
 
 
-const AppBar = ({archivedCount})=> (
+const AppBar = ({archivedCount, mobile})=> (
   <header className={'app-bar-header'}>
     <div className={'app-flex-1'}>
-      <Brand />
+      <Brand mobile={mobile} />
     </div>
     <div className={'app-flex-2'}>
-      <Search />
+      <Search mobile={mobile} />
     </div>
     <div className={'app-flex-3'}>
-      <SortDropdown />
-      <FontAwesomeIcon
-        size={'2x'}
-        className={'app-bar-archive-icon'}
-        icon={faArchive}
-      />
-      <Badge
-        className={'app-bar-archive-badge'}
-        pill
-        theme='primary'>
-        {archivedCount}
-      </Badge>
+      <SortDropdown mobile={mobile} />
+      {!mobile &&
+        <Fragment>
+          <FontAwesomeIcon
+            size={'2x'}
+            className={'app-bar-archive-icon'}
+            icon={faArchive}
+          />
+          <Badge
+            className={'app-bar-archive-badge'}
+            pill
+            theme='primary'>
+            {archivedCount}
+          </Badge>
+        </Fragment>
+      }
+
     </div>
   </header>
 );
 AppBar.propTypes = {
-  archivedCount: PropTypes.number
+  archivedCount: PropTypes.number,
+  mobile: PropTypes.bool
 };
 
 
-const mapStateToProps = ({things})=> ({
-  archivedCount: getArchivedCount(things.items)
+const mapStateToProps = ({things, browser, device})=> ({
+  archivedCount: getArchivedCount(things.items),
+  mobile: isMobile(browser) || isTablet(device)
 });
 
 

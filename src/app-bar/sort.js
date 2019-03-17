@@ -35,8 +35,9 @@ CheckBox.propTypes = {
 };
 
 
-const SortDropdown = ({open, sortType, onSetSort, setOpen})=> (
+const SortDropdown = ({open, sortType, onSetSort, setOpen, mobile})=> (
   <Dropdown
+    className={mobile ? 'app-bar-dropdown' : undefined}
     open={open}
     toggle={()=> setOpen(!open)}
   >
@@ -83,6 +84,7 @@ const SortDropdown = ({open, sortType, onSetSort, setOpen})=> (
   </Dropdown>
 );
 SortDropdown.propTypes = {
+  mobile: PropTypes.bool,
   open: PropTypes.bool,
   sortType: PropTypes.string,
   onSetSort: PropTypes.func,

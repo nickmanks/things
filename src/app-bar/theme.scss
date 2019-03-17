@@ -28,6 +28,13 @@
   margin-top: 7px;
 }
 
+.app-bar-logo-img-mobile {
+  height: 31px;
+  margin-left: 26px;
+  margin-top: 11px;
+  margin-right: 45px;
+}
+
 .app-flex-1 {
   flex-grow:  1;
 }
@@ -43,7 +50,12 @@
 
 .app-bar-search {
   margin-left: -40px;
-  margin-top: -10px;
+  margin-top: 0px;
+}
+
+.app-bar-search-mobile {
+  margin-left: -34px;
+  min-width: 180px;
 }
 
 .app-bar-archive-icon {
@@ -64,6 +76,10 @@
   display: flex;
   height: 60px;
   margin: auto;
+}
+
+.app-bar-dropdown {
+  margin-left: -93px;
 }
 
 .app-bar-sort-dropdown {

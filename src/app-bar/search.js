@@ -13,8 +13,12 @@ import {setSearchValue} from '../things/actions';
 import './theme.scss';
 
 
-const Search = ({searchValue, updateSearch})=> (
-  <InputGroup className={'app-bar-search'} size="lg" seamless>
+const Search = ({searchValue, updateSearch, mobile})=> (
+  <InputGroup
+    className={mobile ? 'app-bar-search' : 'app-bar-search-mobile'}
+    size={mobile ? 'sm' : '2x'}
+    seamless
+  >
     <InputGroupAddon type="prepend">
       <InputGroupText>
         <FontAwesomeIcon icon={faSearch} />
@@ -29,6 +33,7 @@ const Search = ({searchValue, updateSearch})=> (
   </InputGroup>
 );
 Search.propTypes = {
+  mobile: PropTypes.bool,
   searchValue: PropTypes.string,
   updateSearch: PropTypes.func
 };

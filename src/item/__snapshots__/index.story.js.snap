@@ -11,9 +11,9 @@ exports[`Storyshots Connected/Item with done item 1`] = `
               <FormInput className={"item-name-input"} value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"}>
                 <input value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
               </FormInput>
-              <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
-                <span className={"item-time-pill badge badge-secondary badge-pill"}>
-                  17972 days
+              <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
+                <span className={"item-time-pill badge badge-light badge-pill"}>
+                  17972d
                 </span>
               </Badge>
             </div>
@@ -27,7 +27,7 @@ exports[`Storyshots Connected/Item with done item 1`] = `
               <b>
                 Ingredients
               </b>
-              <div>
+              <div className={"item-description"}>
                 1x Tomato, 1x Onion, 1x Spaghetti
               </div>
             </div>
@@ -74,9 +74,9 @@ exports[`Storyshots Connected/Item with in progress item 1`] = `
               <FormInput className={"item-name-input"} value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"}>
                 <input value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
               </FormInput>
-              <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
-                <span className={"item-time-pill badge badge-secondary badge-pill"}>
-                  17972 days
+              <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
+                <span className={"item-time-pill badge badge-light badge-pill"}>
+                  17972d
                 </span>
               </Badge>
             </div>
@@ -90,7 +90,7 @@ exports[`Storyshots Connected/Item with in progress item 1`] = `
               <b>
                 Ingredients
               </b>
-              <div>
+              <div className={"item-description"}>
                 1x Tomato, 1x Onion, 1x Spaghetti
               </div>
             </div>
@@ -137,9 +137,9 @@ exports[`Storyshots Connected/Item with in ready item 1`] = `
               <FormInput className={"item-name-input"} value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"}>
                 <input value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
               </FormInput>
-              <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
-                <span className={"item-time-pill badge badge-secondary badge-pill"}>
-                  17972 days
+              <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
+                <span className={"item-time-pill badge badge-light badge-pill"}>
+                  17972d
                 </span>
               </Badge>
             </div>
@@ -153,7 +153,7 @@ exports[`Storyshots Connected/Item with in ready item 1`] = `
               <b>
                 Ingredients
               </b>
-              <div>
+              <div className={"item-description"}>
                 1x Tomato, 1x Onion, 1x Spaghetti
               </div>
             </div>

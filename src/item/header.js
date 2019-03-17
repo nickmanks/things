@@ -14,7 +14,7 @@ const ItemHeader = ({name, created, onNameChange})=> (
         onChange={(evt)=> onNameChange(evt.target.value)}
         onClick={(evt)=> evt.stopPropagation()}
       />
-      <Badge className={'item-time-pill'} pill theme="secondary">
+      <Badge className={'item-time-pill'} pill theme="light">
         {dateDistanceStrict(new Date(created))}
       </Badge>
     </div>

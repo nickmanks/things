@@ -3,7 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {storiesOf} from '@storybook/react';
 import {storyStore} from '../stories/helpers';
-import EditorModal from './editor';
+import EditorModal from '.';
 import testItems from '../testing/test-items';
 
 

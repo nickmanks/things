@@ -14,7 +14,7 @@ const getArchivedCount = (items)=> {
   let count = 0;
 
   for (const key of Reflect.ownKeys(items)) {
-    if (items[key].archived) {
+    if (items[key] && items[key].archived) {
       count += 1;
     }
   }

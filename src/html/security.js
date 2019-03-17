@@ -1,7 +1,5 @@
 import React, {Fragment} from 'react';
-import PropTypes from 'prop-types';
 import {lineBreaksToSpaces} from '../utils/strings';
-
 
 const SecurityMeta = ()=> (
   <Fragment>
@@ -32,9 +30,5 @@ const SecurityMeta = ()=> (
     />
   </Fragment>
 );
-
-SecurityMeta.propTypes = {
-  appUrl: PropTypes.string
-};
 
 export default SecurityMeta;

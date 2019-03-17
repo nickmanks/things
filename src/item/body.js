@@ -8,13 +8,13 @@ import './theme.scss';
 const ItemBody = ({category, description, due})=> (
   <CardBody className={'item-body'}>
     {due &&
-      <CardSubtitle>
+      <CardSubtitle className={'item-subtitle'}>
         Due {getTimeTo(new Date(due))}
       </CardSubtitle>
     }
     <div>
       <b>{category}</b>
-      <div>
+      <div className={'item-description'}>
         {description}
       </div>
     </div>

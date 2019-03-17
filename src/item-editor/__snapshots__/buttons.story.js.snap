@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Simple/EditorButtons with multiple items 1`] = `
+<ModalFooter>
+  <div className={"modal-footer"}>
+    <Button id={"archive"} pill={true} outline={true} theme={"primary"} onClick={"function"} tag={"button"}>
+      <button type={"button"} id={"archive"} onClick={"function"} className={"btn btn-outline-primary btn-pill"}>
+        Archive
+      </button>
+    </Button>
+    <Button id={"done"} pill={true} theme={"primary"} onClick={"function"} tag={"button"}>
+      <button type={"button"} id={"done"} onClick={"function"} className={"btn btn-primary btn-pill"}>
+        Done
+      </button>
+    </Button>
+  </div>
+</ModalFooter>
+`;

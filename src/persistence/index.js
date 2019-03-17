@@ -2,7 +2,7 @@ import {useState, useEffect, useMemo} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {service} from './service';
-import {setError, setDone, setProcessing} from './actions';
+import {setError, setDone, setProcessing, setLoaded} from './actions';
 import {setItem} from '../things/actions';
 
 
@@ -10,31 +10,45 @@ const PersistenceManager = ({
   queued, processing, onError, onProcessed, onNext, onLoad
 })=> {
   const [processed, setProcessed] = useState(null);
-  const [loaded, setLoaded] = useState(null);
+  const [loadedItems, setLoadedItems] = useState(null);
 
-  // Use once one mount
+  // Once on mount load the persisted items
   useMemo(()=> {
-    service.loadItems(setLoaded);
+    service.loadItems(setLoadedItems);
   }, []);
 
+  // After loaded items have been registered add them to store
   useEffect(()=> {
-    if (loaded) {
-      onLoad(loaded);
+    if (loadedItems) {
+      onLoad(loadedItems);
     }
-  }, [loaded]);
+  }, [loadedItems]);
 
+  // If there is nothing processing and something in the queue
+  // dispatch it for processing
   useEffect(()=> {
     if (processing.length === 0 && queued[0]) {
       onNext(queued[0]);
     }
   }, [queued]);
 
-  // When the processing array changes signal to start updating those items
+  // Attempt to process the new items
   useEffect(()=> {
-    service.updateItem(processing[0], setProcessed);
+    const processessableItem = processing[0];
+
+    if (processessableItem) {
+      const {type} = processessableItem;
+
+      if (type === 'update') {
+        service.updateItem(processing[0], setProcessed);
+      }
+      if (type === 'delete') {
+        service.deleteItem(processing[0], setProcessed);
+      }
+    }
   }, [processing]);
 
-  // When the processingPromise changes are no longe waiting on updates
+  // Once processed moved to done and process a new item from the queue
   useEffect(()=> {
     if (processed) {
       const {error} = processed;
@@ -82,6 +96,8 @@ const mapDispatchToProps = (dispatch)=> ({
     for (const item of items) {
       dispatch(setItem(item));
     }
+
+    dispatch(setLoaded());
   }
 });
 

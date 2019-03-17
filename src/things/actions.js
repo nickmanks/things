@@ -10,6 +10,11 @@ export const setItem = (item)=> ({
   item
 });
 
+export const deleteItem = (item)=> ({
+  type: 'things/delete-item',
+  item
+});
+
 export const selectItem = (id)=> ({
   type: 'things/select-item',
   id

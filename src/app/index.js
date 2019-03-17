@@ -1,18 +1,37 @@
 import React, {Fragment} from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import AppBar from '../app-bar';
 import ItemNavigator from '../item-navigator';
+import ItemEditor from '../item-editor';
 import PersistenceManager from '../persistence';
 import './theme.scss';
 
 
-const App = ()=> (
+const App = ({loaded})=> (
   <Fragment>
     <AppBar />
-    <div className={'app-container'}>
-      <ItemNavigator />
-    </div>
+    {loaded
+      ? (
+        <div className={'app-container'}>
+          <ItemNavigator />
+          <ItemEditor />
+        </div>
+      ): (
+        <div className={'app-loading-spinner'}>
+          <div className={'app-spinner'}></div>
+        </div>
+      )}
     <PersistenceManager />
   </Fragment>
 );
+App.propTypes = {
+  loaded: PropTypes.bool
+};
 
-export default App;
+
+const mapStateToProps = ({persistence})=> ({
+  loaded: persistence.loaded
+});
+
+export default connect(mapStateToProps)(App);

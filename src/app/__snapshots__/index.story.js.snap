@@ -1,10 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Connected/App with multiple items 1`] = `
-<Fragment>
-  <Connect(AppBar) />
-  <div className={"app-container"}>
-    <Connect(ItemNavigator) />
-  </div>
-</Fragment>
+<App store={{}} loaded={false} dispatch={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Fragment>
+    <Connect(AppBar) />
+    <div className={"app-loading-spinner"}>
+      <div className={"app-spinner"} />
+    </div>
+    <Connect(PersistenceManager) />
+  </Fragment>
+</App>
 `;

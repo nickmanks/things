@@ -7,9 +7,9 @@ exports[`Storyshots Simple/ItemHeader with created 1`] = `
       <FormInput className={"item-name-input"} onChange={"function"} onClick={"function"}>
         <input onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
       </FormInput>
-      <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
-        <span className={"item-time-pill badge badge-secondary badge-pill"}>
-          17972 days
+      <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
+        <span className={"item-time-pill badge badge-light badge-pill"}>
+          17972d
         </span>
       </Badge>
     </div>
@@ -24,9 +24,9 @@ exports[`Storyshots Simple/ItemHeader with name 1`] = `
       <FormInput className={"item-name-input"} value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} onClick={"function"}>
         <input value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
       </FormInput>
-      <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
-        <span className={"item-time-pill badge badge-secondary badge-pill"}>
-          NaN hours
+      <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
+        <span className={"item-time-pill badge badge-light badge-pill"}>
+          d
         </span>
       </Badge>
     </div>
@@ -41,9 +41,9 @@ exports[`Storyshots Simple/ItemHeader with name and created 1`] = `
       <FormInput className={"item-name-input"} value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} onClick={"function"}>
         <input value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
       </FormInput>
-      <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
-        <span className={"item-time-pill badge badge-secondary badge-pill"}>
-          17972 days
+      <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
+        <span className={"item-time-pill badge badge-light badge-pill"}>
+          17972d
         </span>
       </Badge>
     </div>

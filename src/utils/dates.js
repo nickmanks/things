@@ -1,17 +1,30 @@
 import {distanceInWordsStrict, distanceInWords} from 'date-fns';
 
 
+/* eslint no-magic-numbers: 0 */
+
+
 export const now = ()=> new Date();
 
-export const dateDistanceStrict = (date)=> distanceInWordsStrict(
-  // TODO add in some more smarts to differentiate between days, hrs, months
+
+const getUnits = (date)=> {
+  if (new Date().getTime() - date.getTime() < 3.6e+6) {
+    return 'm';
+  }
+
+  if (new Date().getTime() - date.getTime() < 3.6e+6 * 24) {
+    return 'h';
+  }
+
+  return 'd';
+};
+
+export const dateDistanceStrict = (date)=> `${distanceInWordsStrict(
   date, new Date(), {
-    // eslint-disable-next-line no-magic-numbers
-    unit: new Date().getTime() - date.getTime() > 3.6e+6
-      ? 'd' : 'h',
+    unit: getUnits(date),
     partialMethod: 'floor'
   }
-);
+).replace(/\D/g, '')}${getUnits(date)}`;
 
 export const dateDistance = (date)=> distanceInWords(date, new Date());
 

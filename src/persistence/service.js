@@ -1,6 +1,10 @@
 import fetcher from '../fetch';
 import {getFetchOptions} from '../fetch/utils';
-import {getUpdateItemEndpoint, getListItemsEndpoint} from '../config';
+import {
+  getUpdateItemEndpoint,
+  getListItemsEndpoint,
+  getDeleteItemEndpoint
+} from '../config';
 
 const fetch = fetcher('todo-service');
 
@@ -37,5 +41,27 @@ export const service = ({
     );
     const items = await response.json();
     setLoaded(items);
+  },
+
+  deleteItem: async (update, setProcessed)=> {
+    if (!update) {
+      setProcessed(null);
+      return;
+    }
+
+    const {item} = update;
+
+    try {
+      await fetch(
+        getDeleteItemEndpoint(item.id),
+        getFetchOptions('DELETE')
+      );
+    } catch (error) {
+      setProcessed({error});
+      return;
+    }
+
+    setProcessed({error: null});
+    return;
   }
 });

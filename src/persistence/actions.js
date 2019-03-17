@@ -14,3 +14,7 @@ export const setDone = (id)=> ({
   type: 'persistence/set-done',
   id
 });
+
+export const setLoaded = ()=> ({
+  type: 'persistence/set-loaded'
+});

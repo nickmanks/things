@@ -27,6 +27,14 @@ export default reducer(DefaultState, {
     }
   }),
 
+  'things/delete-item': (state, {item})=> ({
+    ...state,
+    items: {
+      ...state.items,
+      [item.id]: undefined
+    }
+  }),
+
   'things/select-item': (state, {id})=> ({
     ...state,
     selected: id

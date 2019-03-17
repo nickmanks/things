@@ -1,4 +1,4 @@
-service: serverless-rest-api-with-dynamodb
+service: things-todo-rest-api
 
 frameworkVersion: ">=1.1.0 <2.0.0"
 
@@ -33,6 +33,14 @@ functions:
       - http:
           path: todos
           method: get
+          cors: true
+
+  delete:
+    handler: api/delete.delete
+    events:
+      - http:
+          path: todos/{id}
+          method: delete
           cors: true
 
 resources:

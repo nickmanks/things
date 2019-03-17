@@ -2,7 +2,8 @@
 /* eslint no-console: 0 */
 /* eslint no-process-env: 0 */
 'use strict';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
+
 const AWS = require('aws-sdk');
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();

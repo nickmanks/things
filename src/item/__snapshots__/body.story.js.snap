@@ -7,7 +7,7 @@ exports[`Storyshots Simple/ItemBody with category 1`] = `
       <b>
         Ingredients
       </b>
-      <div />
+      <div className={"item-description"} />
     </div>
     <div className={"item-body-bottom-fade"} />
   </div>
@@ -21,7 +21,7 @@ exports[`Storyshots Simple/ItemBody with category and description 1`] = `
       <b>
         Ingredients
       </b>
-      <div>
+      <div className={"item-description"}>
         1x Tomato, 1x Onion
       </div>
     </div>
@@ -33,8 +33,8 @@ exports[`Storyshots Simple/ItemBody with category and description 1`] = `
 exports[`Storyshots Simple/ItemBody with category, description and date 1`] = `
 <CardBody className={"item-body"} tag={"div"}>
   <div className={"item-body card-body"}>
-    <CardSubtitle tag={"h6"}>
-      <h6 className={"card-subtitle text-muted"}>
+    <CardSubtitle className={"item-subtitle"} tag={"h6"}>
+      <h6 className={"item-subtitle card-subtitle text-muted"}>
         Due 
         about 49 years ago
       </h6>
@@ -43,7 +43,7 @@ exports[`Storyshots Simple/ItemBody with category, description and date 1`] = `
       <b>
         Ingredients
       </b>
-      <div>
+      <div className={"item-description"}>
         1x Tomato, 1x Onion
       </div>
     </div>
@@ -57,7 +57,7 @@ exports[`Storyshots Simple/ItemBody with description 1`] = `
   <div className={"item-body card-body"}>
     <div>
       <b />
-      <div>
+      <div className={"item-description"}>
         This is a new description
       </div>
     </div>
@@ -69,15 +69,15 @@ exports[`Storyshots Simple/ItemBody with description 1`] = `
 exports[`Storyshots Simple/ItemBody with due 1`] = `
 <CardBody className={"item-body"} tag={"div"}>
   <div className={"item-body card-body"}>
-    <CardSubtitle tag={"h6"}>
-      <h6 className={"card-subtitle text-muted"}>
+    <CardSubtitle className={"item-subtitle"} tag={"h6"}>
+      <h6 className={"item-subtitle card-subtitle text-muted"}>
         Due 
         about 49 years ago
       </h6>
     </CardSubtitle>
     <div>
       <b />
-      <div />
+      <div className={"item-description"} />
     </div>
     <div className={"item-body-bottom-fade"} />
   </div>

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Simple/EditorInputs with multiple items 1`] = `
+<ModalBody>
+  <div className={"modal-body"}>
+    <div className={"editor-created"}>
+      <b>
+        created 
+        about 49 years ago
+      </b>
+    </div>
+    <p>
+       Due: 
+    </p>
+    <DatePicker className={"editor-date-picker"} selected={"2286-11-20T17:46:40.000Z"} onChange={"function"} dateFormat={"dd/MM/yy"} allowSameDay={false} dateFormatCalendar={"LLLL yyyy"} disabled={false} disabledKeyboardNavigation={false} dropdownMode={"scroll"} onFocus={"function"} onBlur={"function"} onKeyDown={"function"} onInputClick={"function"} onSelect={"function"} onClickOutside={"function"} onMonthChange={"function"} preventOpenOnFocus={false} onYearChange={"function"} onInputError={"function"} monthsShown={1} readOnly={false} withPortal={false} shouldCloseOnSelect={true} showTimeSelect={false} showTimeInput={false} strictParsing={false} timeIntervals={30} timeCaption={"Time"} previousMonthButtonLabel={"Previous Month"} nextMonthButtonLabel={"Next month"} timeInputLabel={"Time"} renderDayContents={"function"} inlineFocusSelectedMonth={false}>
+      <PopperComponent hidePopper={true} popperModifiers={{"preventOverflow":{"enabled":true,"escapeWithReference":true,"boundariesElement":"viewport"}}} targetComponent={{"type":"div","key":null,"ref":null,"props":{"className":"react-datepicker__input-container","children":[{"type":"input","key":null,"props":{"type":"text","value":"21/11/86","disabled":false,"className":"editor-date-picker","readOnly":false},"_owner":null,"_store":{}},null]},"_owner":null,"_store":{}}} popperComponent={null} popperPlacement={"bottom-start"} popperProps={{}}>
+        <Manager>
+          <ContextProvider value={{}}>
+            <Reference>
+              <ContextConsumer>
+                <Component />
+              </ContextConsumer>
+            </Reference>
+          </ContextProvider>
+        </Manager>
+      </PopperComponent>
+    </DatePicker>
+    <p>
+       Category: 
+    </p>
+    <FormInput className={"editor-category"} value={"thing"} placeholder={"thing"} onChange={"function"}>
+      <input value={"thing"} placeholder={"thing"} onChange={"function"} className={"editor-category form-control"} />
+    </FormInput>
+    <p>
+       Description: 
+    </p>
+    <FormTextarea value={"Nunc quis nisl ac justo elementum sagittis in quis justo."} placeholder={"Nunc quis nisl ac justo elementum sagittis in quis justo."} onChange={"function"}>
+      <textarea value={"Nunc quis nisl ac justo elementum sagittis in quis justo."} placeholder={"Nunc quis nisl ac justo elementum sagittis in quis justo."} onChange={"function"} className={"form-control"} />
+    </FormTextarea>
+  </div>
+</ModalBody>
+`;

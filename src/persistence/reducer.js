@@ -6,19 +6,33 @@ const DefaultState = {
   queued: [],
   processing: [],
   done: [],
-  errors: []
+  errors: [],
+  loaded: false
 };
 
 
 export default reducer(DefaultState, {
-  // Listen to the updat item action and update it
+  /* FROM OUTSIDE ACTIONS */
+  // Listen to the update item action
   'things/update-item': (state, {item})=> ({
     ...state,
     queued: [...state.queued, {
       id: uuidV4(),
+      type: 'update',
       item
     }]
   }),
+
+  'things/delete-item': (state, {item})=> ({
+    ...state,
+    queued: [...state.queued, {
+      id: uuidV4(),
+      type: 'delete',
+      item
+    }]
+  }),
+
+  /* FROM INSIDE ACTIONS */
 
   'persistence/set-processing': (state, {id})=> ({
     ...state,
@@ -37,5 +51,10 @@ export default reducer(DefaultState, {
   'persistence/set-error': (state, {error})=> ({
     ...state,
     errors: [...state.errors, error]
+  }),
+
+  'persistence/set-loaded': (state)=> ({
+    ...state,
+    loaded: true
   })
 });

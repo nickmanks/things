@@ -5,6 +5,11 @@ export const updateItem = (item)=> ({
   item
 });
 
+export const setItem = (item)=> ({
+  type: 'things/set-item',
+  item
+});
+
 export const selectItem = (id)=> ({
   type: 'things/select-item',
   id

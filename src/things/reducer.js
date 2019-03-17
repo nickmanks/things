@@ -19,6 +19,14 @@ export default reducer(DefaultState, {
     }
   }),
 
+  'things/set-item': (state, {item})=> ({
+    ...state,
+    items: {
+      ...state.items,
+      [item.id]: item
+    }
+  }),
+
   'things/select-item': (state, {id})=> ({
     ...state,
     selected: id

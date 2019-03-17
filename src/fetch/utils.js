@@ -1,7 +1,7 @@
 
 
 export const getFetchOptions = (
-    method, body, token, type = 'application/json'
+    method, body, token, type='application/json'
 )=> ({
   method,
   headers: {

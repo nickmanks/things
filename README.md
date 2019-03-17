@@ -25,7 +25,7 @@
 
   :book: Read the [Quick Start Guide](https://enter-your-docs-guide-url.com)
 
-  :rocket: [Try it out](https://enter-your-site-url.com)
+  :rocket: [Try it out](http:localhost:8080/todo/)
 
   :hatched_chick: Current status: **Alpha**
 
@@ -36,6 +36,7 @@
 
   ## Table of Contents
 
+-   [Background](#background)
 -   [Install](#install)
 -   [Usage](#usage)
 -   [Build & Package](#build-and-package)
@@ -46,9 +47,6 @@
 -   [Contributing](#contributing)
 -   [App Configuration](#configuration)
 -   [Maintainers](#maintainers)
--   [Under The Hood](#under-the-hood)
--   [Disclaimer](#disclaimer)
--   [License](#license)
 
 
 ## Install
@@ -193,6 +191,13 @@ Pull requests and commits follow commitizen conventional commit guidelines.
 
 ## Configuration
 
+The Todo REST API can be found in [services/todo](./services/todo).
+
+The application uses this serverless development stage lambda functions and
+dynamoDB to supply GET, POST and DELETE todo item endpoints.
+
+Endpoints can be found in the [config](./src/config.js) file.
+
 
 ## Maintainers
 
@@ -200,9 +205,3 @@ Pull requests and commits follow commitizen conventional commit guidelines.
 
 
 Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
-
-## Under the Hood
-
-## Disclaimer
-
-Any use of this software by any person will incur no liability on the owner of this software.

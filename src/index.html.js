@@ -12,7 +12,6 @@ import {store} from './store';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'shards-ui/dist/css/shards.min.css';
-import 'hamburgers/dist/hamburgers.min.css';
 
 
 const containerId = 'root';
@@ -31,7 +30,7 @@ const Html = ({scripts, styles, version, appUrl})=> (
       <ViewportMeta />
 
       <SocialMeta
-        title="Todo Awesome"
+        title="Things - Get them done!"
         appUrl={appUrl}
         description="An awesome todo application"
       />

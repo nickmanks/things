@@ -7,7 +7,7 @@ import {unwrappedShallow, testStore} from '../testing/helpers';
 jest.mock('uuid/v4', ()=> ()=> 'test-id');
 jest.mock('../utils/dates', ()=> ({
   now: ()=> ({
-    getTime: ()=> '100'
+    getTime: ()=> 100
   })
 }));
 
@@ -25,10 +25,13 @@ describe('<OutlineItem />', ()=> {
     expect(items['test-id']).toEqual({
       id: 'test-id',
       name: 'New Thing!',
-      description: 'Click to edit my description and category',
+      description: 'Click here to edit my description, category and due date',
       category: 'Category',
       status: 'ready',
-      created: '100'
+      archived: false,
+      archivedDate: null,
+      due: 100,
+      created: 100
     });
   });
 });

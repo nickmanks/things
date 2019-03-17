@@ -1,37 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Simple/ItemBody with category 1`] = `
-<CardBody className={"item-body"} onClick={"function"} tag={"div"}>
-  <div onClick={"function"} className={"item-body card-body"}>
-    <CardSubtitle tag={"h6"}>
-      <h6 className={"card-subtitle text-muted"}>
+<CardBody className={"item-body"} tag={"div"}>
+  <div className={"item-body card-body"}>
+    <div>
+      <b>
         Ingredients
-      </h6>
-    </CardSubtitle>
+      </b>
+      <div />
+    </div>
+    <div className={"item-body-bottom-fade"} />
   </div>
 </CardBody>
 `;
 
 exports[`Storyshots Simple/ItemBody with category and description 1`] = `
-<CardBody className={"item-body"} onClick={"function"} tag={"div"}>
-  <div onClick={"function"} className={"item-body card-body"}>
+<CardBody className={"item-body"} tag={"div"}>
+  <div className={"item-body card-body"}>
+    <div>
+      <b>
+        Ingredients
+      </b>
+      <div>
+        1x Tomato, 1x Onion
+      </div>
+    </div>
+    <div className={"item-body-bottom-fade"} />
+  </div>
+</CardBody>
+`;
+
+exports[`Storyshots Simple/ItemBody with category, description and date 1`] = `
+<CardBody className={"item-body"} tag={"div"}>
+  <div className={"item-body card-body"}>
     <CardSubtitle tag={"h6"}>
       <h6 className={"card-subtitle text-muted"}>
-        Ingredients
+        Due 
+        about 49 years ago
       </h6>
     </CardSubtitle>
-    1x Tomato, 1x Onion
+    <div>
+      <b>
+        Ingredients
+      </b>
+      <div>
+        1x Tomato, 1x Onion
+      </div>
+    </div>
+    <div className={"item-body-bottom-fade"} />
   </div>
 </CardBody>
 `;
 
 exports[`Storyshots Simple/ItemBody with description 1`] = `
-<CardBody className={"item-body"} onClick={"function"} tag={"div"}>
-  <div onClick={"function"} className={"item-body card-body"}>
+<CardBody className={"item-body"} tag={"div"}>
+  <div className={"item-body card-body"}>
+    <div>
+      <b />
+      <div>
+        This is a new description
+      </div>
+    </div>
+    <div className={"item-body-bottom-fade"} />
+  </div>
+</CardBody>
+`;
+
+exports[`Storyshots Simple/ItemBody with due 1`] = `
+<CardBody className={"item-body"} tag={"div"}>
+  <div className={"item-body card-body"}>
     <CardSubtitle tag={"h6"}>
-      <h6 className={"card-subtitle text-muted"} />
+      <h6 className={"card-subtitle text-muted"}>
+        Due 
+        about 49 years ago
+      </h6>
     </CardSubtitle>
-    This is a new description
+    <div>
+      <b />
+      <div />
+    </div>
+    <div className={"item-body-bottom-fade"} />
   </div>
 </CardBody>
 `;

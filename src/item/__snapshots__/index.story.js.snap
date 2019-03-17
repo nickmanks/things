@@ -1,34 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Connected/Item with done item 1`] = `
-<Item item={{"name":"Buy Groceries","category":"Ingredients","description":"1x Tomato, 1x Onion, 1x Spaghetti","status":"done","created":"3h"}} store={{}} onNameChange={"function"} onUpdateStatus={"function"} onEditItem={"function"} storeSubscription={{"store":{},"listeners":{}}}>
-  <Card className={"item"} tag={"div"}>
-    <div className={"item card"}>
-      <ItemHeader name={"Buy Groceries"} created={"3h"} onNameChange={"function"}>
+<Item item={{"name":"Buy Groceries","category":"Ingredients","description":"1x Tomato, 1x Onion, 1x Spaghetti","status":"done","created":10000}} store={{}} onNameChange={"function"} onUpdateStatus={"function"} onEditItem={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Card className={"item"} onClick={"function"} tag={"div"}>
+    <div onClick={"function"} className={"item card"}>
+      <ItemHeader name={"Buy Groceries"} created={10000} onNameChange={"function"}>
         <CardHeader tag={"div"}>
           <div className={"card-header"}>
             <div className={"item-header"}>
-              <FormInput className={"item-name-input"} value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"}>
-                <input value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} className={"item-name-input form-control"} />
+              <FormInput className={"item-name-input"} value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"}>
+                <input value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
               </FormInput>
               <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
                 <span className={"item-time-pill badge badge-secondary badge-pill"}>
-                  NaN days
+                  17972 days
                 </span>
               </Badge>
             </div>
           </div>
         </CardHeader>
       </ItemHeader>
-      <ItemBody category={"Ingredients"} description={"1x Tomato, 1x Onion, 1x Spaghetti"} onEditItem={"function"}>
-        <CardBody className={"item-body"} onClick={"function"} tag={"div"}>
-          <div onClick={"function"} className={"item-body card-body"}>
-            <CardSubtitle tag={"h6"}>
-              <h6 className={"card-subtitle text-muted"}>
+      <ItemBody category={"Ingredients"} description={"1x Tomato, 1x Onion, 1x Spaghetti"}>
+        <CardBody className={"item-body"} tag={"div"}>
+          <div className={"item-body card-body"}>
+            <div>
+              <b>
                 Ingredients
-              </h6>
-            </CardSubtitle>
-            1x Tomato, 1x Onion, 1x Spaghetti
+              </b>
+              <div>
+                1x Tomato, 1x Onion, 1x Spaghetti
+              </div>
+            </div>
+            <div className={"item-body-bottom-fade"} />
           </div>
         </CardBody>
       </ItemBody>
@@ -61,34 +64,37 @@ exports[`Storyshots Connected/Item with done item 1`] = `
 `;
 
 exports[`Storyshots Connected/Item with in progress item 1`] = `
-<Item item={{"name":"Buy Groceries","category":"Ingredients","description":"1x Tomato, 1x Onion, 1x Spaghetti","status":"in progress","created":"3h"}} store={{}} onNameChange={"function"} onUpdateStatus={"function"} onEditItem={"function"} storeSubscription={{"store":{},"listeners":{}}}>
-  <Card className={"item"} tag={"div"}>
-    <div className={"item card"}>
-      <ItemHeader name={"Buy Groceries"} created={"3h"} onNameChange={"function"}>
+<Item item={{"name":"Buy Groceries","category":"Ingredients","description":"1x Tomato, 1x Onion, 1x Spaghetti","status":"in progress","created":10000}} store={{}} onNameChange={"function"} onUpdateStatus={"function"} onEditItem={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Card className={"item"} onClick={"function"} tag={"div"}>
+    <div onClick={"function"} className={"item card"}>
+      <ItemHeader name={"Buy Groceries"} created={10000} onNameChange={"function"}>
         <CardHeader tag={"div"}>
           <div className={"card-header"}>
             <div className={"item-header"}>
-              <FormInput className={"item-name-input"} value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"}>
-                <input value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} className={"item-name-input form-control"} />
+              <FormInput className={"item-name-input"} value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"}>
+                <input value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
               </FormInput>
               <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
                 <span className={"item-time-pill badge badge-secondary badge-pill"}>
-                  NaN days
+                  17972 days
                 </span>
               </Badge>
             </div>
           </div>
         </CardHeader>
       </ItemHeader>
-      <ItemBody category={"Ingredients"} description={"1x Tomato, 1x Onion, 1x Spaghetti"} onEditItem={"function"}>
-        <CardBody className={"item-body"} onClick={"function"} tag={"div"}>
-          <div onClick={"function"} className={"item-body card-body"}>
-            <CardSubtitle tag={"h6"}>
-              <h6 className={"card-subtitle text-muted"}>
+      <ItemBody category={"Ingredients"} description={"1x Tomato, 1x Onion, 1x Spaghetti"}>
+        <CardBody className={"item-body"} tag={"div"}>
+          <div className={"item-body card-body"}>
+            <div>
+              <b>
                 Ingredients
-              </h6>
-            </CardSubtitle>
-            1x Tomato, 1x Onion, 1x Spaghetti
+              </b>
+              <div>
+                1x Tomato, 1x Onion, 1x Spaghetti
+              </div>
+            </div>
+            <div className={"item-body-bottom-fade"} />
           </div>
         </CardBody>
       </ItemBody>
@@ -121,34 +127,37 @@ exports[`Storyshots Connected/Item with in progress item 1`] = `
 `;
 
 exports[`Storyshots Connected/Item with in ready item 1`] = `
-<Item item={{"name":"Buy Groceries","category":"Ingredients","description":"1x Tomato, 1x Onion, 1x Spaghetti","status":"ready","created":"3h"}} store={{}} onNameChange={"function"} onUpdateStatus={"function"} onEditItem={"function"} storeSubscription={{"store":{},"listeners":{}}}>
-  <Card className={"item"} tag={"div"}>
-    <div className={"item card"}>
-      <ItemHeader name={"Buy Groceries"} created={"3h"} onNameChange={"function"}>
+<Item item={{"name":"Buy Groceries","category":"Ingredients","description":"1x Tomato, 1x Onion, 1x Spaghetti","status":"ready","created":10000}} store={{}} onNameChange={"function"} onUpdateStatus={"function"} onEditItem={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Card className={"item"} onClick={"function"} tag={"div"}>
+    <div onClick={"function"} className={"item card"}>
+      <ItemHeader name={"Buy Groceries"} created={10000} onNameChange={"function"}>
         <CardHeader tag={"div"}>
           <div className={"card-header"}>
             <div className={"item-header"}>
-              <FormInput className={"item-name-input"} value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"}>
-                <input value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} className={"item-name-input form-control"} />
+              <FormInput className={"item-name-input"} value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"}>
+                <input value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
               </FormInput>
               <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
                 <span className={"item-time-pill badge badge-secondary badge-pill"}>
-                  NaN days
+                  17972 days
                 </span>
               </Badge>
             </div>
           </div>
         </CardHeader>
       </ItemHeader>
-      <ItemBody category={"Ingredients"} description={"1x Tomato, 1x Onion, 1x Spaghetti"} onEditItem={"function"}>
-        <CardBody className={"item-body"} onClick={"function"} tag={"div"}>
-          <div onClick={"function"} className={"item-body card-body"}>
-            <CardSubtitle tag={"h6"}>
-              <h6 className={"card-subtitle text-muted"}>
+      <ItemBody category={"Ingredients"} description={"1x Tomato, 1x Onion, 1x Spaghetti"}>
+        <CardBody className={"item-body"} tag={"div"}>
+          <div className={"item-body card-body"}>
+            <div>
+              <b>
                 Ingredients
-              </h6>
-            </CardSubtitle>
-            1x Tomato, 1x Onion, 1x Spaghetti
+              </b>
+              <div>
+                1x Tomato, 1x Onion, 1x Spaghetti
+              </div>
+            </div>
+            <div className={"item-body-bottom-fade"} />
           </div>
         </CardBody>
       </ItemBody>

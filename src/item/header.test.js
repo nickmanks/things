@@ -16,4 +16,16 @@ describe('<ItemHeader />', ()=> {
 
     expect(onChange).toHaveBeenCalledWith('some change');
   });
+
+  it('stops event propagation on click', ()=> {
+    const onChange = jest.fn();
+    const wrapper = unwrappedShallow(<ItemHeader onNameChange={onChange} />);
+    const evt = {
+      stopPropagation: jest.fn()
+    };
+
+    wrapper.find(FormInput).prop('onClick')(evt);
+
+    expect(evt.stopPropagation).toHaveBeenCalled();
+  });
 });

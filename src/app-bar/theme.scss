@@ -36,9 +36,27 @@
   flex-grow: 4;
 }
 
+.app-flex-3 {
+  flex-grow:  1;
+  display: flex;
+}
+
 .app-bar-search {
-  margin-left: -67px;
+  margin-left: -40px;
   margin-top: -10px;
+}
+
+.app-bar-archive-icon {
+  color: #ABB6BB;
+  height: 28px;
+  margin-left: 5px;
+}
+
+.app-bar-archive-badge {
+  height: 24px;
+  position: relative;
+  right: 13px;
+  top: -11px;
 }
 
 .flex-dropdown {
@@ -46,6 +64,10 @@
   display: flex;
   height: 60px;
   margin: auto;
+}
+
+.app-bar-sort-dropdown {
+  margin-top: -5px;
 }
 
 .sort-checkbox {

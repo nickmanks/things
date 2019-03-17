@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {
@@ -15,6 +15,24 @@ import './theme.scss';
 export const SORT_NEWEST = 'newest';
 export const SORT_OLDEST = 'oldest';
 export const SORT_STATUS = 'status';
+export const SORT_DUE = 'due';
+export const SORT_ARCHIVED = 'archived';
+
+
+export const CheckBox = ({show})=> (
+  <Fragment>
+    {show &&
+      <FormCheckbox
+        className={'sort-checkbox'}
+        checked={true}
+        id='sort-checkbox'
+      />
+    }
+  </Fragment>
+);
+CheckBox.propTypes = {
+  show: PropTypes.bool
+};
 
 
 const SortDropdown = ({open, sortType, onSetSort, setOpen})=> (
@@ -22,48 +40,44 @@ const SortDropdown = ({open, sortType, onSetSort, setOpen})=> (
     open={open}
     toggle={()=> setOpen(!open)}
   >
-    <DropdownToggle nav caret>
+    <DropdownToggle nav caret className={'app-bar-sort-dropdown'}>
       Sort
     </DropdownToggle>
     <DropdownMenu className={'app-bar-dropdown'}>
       <DropdownItem
         id='newest'
         className={'flex-dropdown'}
-        onClick={
-          ()=> onSetSort(sortType === SORT_NEWEST ? null : SORT_NEWEST)
-        }
+        onClick={()=> onSetSort(sortType, SORT_NEWEST)}
       >
-        Created newest {
-          sortType === SORT_NEWEST
-            ? (<FormCheckbox className={'sort-checkbox'} checked={true} />)
-            : null
-        }
+        Created newest <CheckBox show={sortType === SORT_NEWEST} />
       </DropdownItem>
       <DropdownItem
         id='oldest'
         className={'flex-dropdown'}
-        onClick={
-          ()=> onSetSort(sortType === SORT_OLDEST ? null : SORT_OLDEST)
-        }
+        onClick={()=> onSetSort(sortType, SORT_OLDEST)}
       >
-        Created oldest {
-          sortType === SORT_OLDEST
-            ? (<FormCheckbox className={'sort-checkbox'} checked={true} />)
-            : null
-        }
+        Created oldest <CheckBox show={sortType === SORT_OLDEST} />
+      </DropdownItem>
+      <DropdownItem
+        id='due'
+        className={'flex-dropdown'}
+        onClick={()=> onSetSort(sortType, SORT_DUE)}
+      >
+        Due date <CheckBox show={sortType === SORT_DUE} />
       </DropdownItem>
       <DropdownItem
         id='status'
         className={'flex-dropdown'}
-        onClick={
-          ()=> onSetSort(sortType === SORT_STATUS ? null : SORT_STATUS)
-        }
+        onClick={()=> onSetSort(sortType, SORT_STATUS)}
       >
-        Status {
-          sortType === SORT_STATUS
-            ? (<FormCheckbox className={'sort-checkbox'} checked={true} />)
-            : null
-        }
+        Status <CheckBox show={sortType === SORT_STATUS} />
+      </DropdownItem>
+      <DropdownItem
+        id='archived'
+        className={'flex-dropdown'}
+        onClick={()=> onSetSort(sortType, SORT_ARCHIVED)}
+      >
+        Archived <CheckBox show={sortType === SORT_ARCHIVED} />
       </DropdownItem>
     </DropdownMenu>
   </Dropdown>
@@ -82,8 +96,8 @@ const mapStateToProps = ({things})=> ({
 });
 
 const mapDispatchToProps = (dispatch)=> ({
-  onSetSort: (type)=> {
-    dispatch(setSortType(type));
+  onSetSort: (oldType, newType)=> {
+    dispatch(setSortType(oldType === newType ? null : newType));
   },
   setOpen: (open)=> {
     dispatch(setSortOpen(open));

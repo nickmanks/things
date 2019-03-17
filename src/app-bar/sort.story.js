@@ -2,7 +2,7 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {storyStore} from '../stories/helpers';
-import Sort from './sort';
+import Sort, {CheckBox} from './sort';
 import './theme.scss';
 
 
@@ -46,4 +46,25 @@ storiesOf('Connected/Sort', module)
     });
 
     return (<Sort store={store} />);
-  });
+  })
+  .add('open with sort due', ()=> {
+    const store = storyStore({
+      things: {
+        sortType: 'due',
+        sortOpen: true
+      }
+    });
+
+    return (<Sort store={store} />);
+  })
+  .add('open with sort archived', ()=> {
+    const store = storyStore({
+      things: {
+        sortType: 'archived',
+        sortOpen: true
+      }
+    });
+
+    return (<Sort store={store} />);
+  })
+  .add('sort checkbox', ()=> (<CheckBox show={true} />));

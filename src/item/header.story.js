@@ -14,14 +14,14 @@ storiesOf('Simple/ItemHeader', module)
   ))
   .add('with created', ()=> (
     <ItemHeader
-      created={'2d'}
+      created={10000}
       onNameChange={()=> null}
     />
   ))
   .add('with name and created', ()=> (
     <ItemHeader
       name={'Thing to do!'}
-      created={'2d'}
+      created={10000}
       onNameChange={()=> null}
     />
   ));

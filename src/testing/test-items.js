@@ -1,4 +1,6 @@
 
+/* eslint no-magic-numbers: 0 */
+
 
 export default {
   ['test-id-1']: {
@@ -6,7 +8,10 @@ export default {
     name: 'Today do things',
     category: 'thing',
     description: 'Nunc quis nisl ac justo elementum sagittis in quis justo.',
-    created: '12m',
+    created: 10000000,
+    due: 10000000,
+    archived: false,
+    archivedDate: null,
     status: 'done'
   },
   ['test-id-2']: {
@@ -14,7 +19,10 @@ export default {
     name: 'Thing is due',
     category: 'due',
     description: 'Nunc quis nisl ac justo elementum sagittis in quis justo.',
-    created: '2d',
+    created: 500000,
+    due: 500000,
+    archived: false,
+    archivedDate: null,
     status: 'progress'
   },
   ['test-id-3']: {
@@ -22,7 +30,10 @@ export default {
     name: 'Create a thing',
     category: 'create',
     description: 'Nunc quis nisl ac justo elementum sagittis in quis justo.',
-    created: '3h',
+    created: 200000,
+    due: 200000,
+    archived: false,
+    archivedDate: null,
     status: 'ready'
   },
   ['test-id-4']: {
@@ -30,7 +41,21 @@ export default {
     name: 'Create a thing',
     category: 'create',
     description: 'dadasdasd.',
-    created: '3h',
+    created: 1000,
+    due: 1000,
+    archived: false,
+    archivedDate: null,
+    status: 'done'
+  },
+  ['test-id-5']: {
+    id: 'test-id-5',
+    name: 'Create a thing',
+    category: 'create',
+    description: 'dadasdasd.',
+    created: 1000,
+    due: 1000,
+    archived: true,
+    archivedDate: 7000000,
     status: 'done'
   }
 };

@@ -10,16 +10,19 @@ import {
 } from 'shards-react';
 import uuidV4 from 'uuid/v4';
 import {now} from '../utils/dates';
-import {updateItem} from '../things/actions';
+import {updateItem, setSortType} from '../things/actions';
 import './theme.scss';
 
 
 const createNewItem = ()=> ({
   id: uuidV4(),
   name: 'New Thing!',
-  description: 'Click to edit my description and category',
+  description: 'Click here to edit my description, category and due date',
   category: 'Category',
   status: 'ready',
+  archived: false,
+  archivedDate: null,
+  due: now().getTime(),
   created: now().getTime()
 });
 
@@ -52,6 +55,7 @@ const mapDispatchToProps = (dispatch)=> ({
     dispatch(
       updateItem(createNewItem())
     );
+    dispatch(setSortType(null));
   }
 });
 

@@ -1,18 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {CardBody, CardSubtitle} from 'shards-react';
+import {getTimeTo} from '../utils/dates';
+import './theme.scss';
 
 
-const ItemBody = ({category, description, onEditItem})=> (
-  <CardBody className={'item-body'} onClick={()=> onEditItem()}>
-    <CardSubtitle>{category}</CardSubtitle>
-    {description}
+const ItemBody = ({category, description, due})=> (
+  <CardBody className={'item-body'}>
+    {due &&
+      <CardSubtitle>
+        Due {getTimeTo(new Date(due))}
+      </CardSubtitle>
+    }
+    <div>
+      <b>{category}</b>
+      <div>
+        {description}
+      </div>
+    </div>
+    <div className={'item-body-bottom-fade'} />
   </CardBody>
 );
 ItemBody.propTypes = {
   category: PropTypes.string,
   description: PropTypes.string,
-  onEditItem: PropTypes.func
+  due: PropTypes.number
 };
 
 export default ItemBody;

@@ -111,6 +111,7 @@ describe('Sorting searched items', ()=> {
     expect(testItemsArray.sort(sortFn)).toEqual([
       {item: testItems['test-id-1']},
       {item: testItems['test-id-4']},
+      {item: testItems['test-id-5']},
       {item: testItems['test-id-3']},
       {item: testItems['test-id-2']}
     ]);

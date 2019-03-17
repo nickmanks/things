@@ -4,12 +4,12 @@ exports[`Storyshots Simple/ItemHeader with created 1`] = `
 <CardHeader tag={"div"}>
   <div className={"card-header"}>
     <div className={"item-header"}>
-      <FormInput className={"item-name-input"} onChange={"function"}>
-        <input onChange={"function"} className={"item-name-input form-control"} />
+      <FormInput className={"item-name-input"} onChange={"function"} onClick={"function"}>
+        <input onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
       </FormInput>
       <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
         <span className={"item-time-pill badge badge-secondary badge-pill"}>
-          NaN days
+          17972 days
         </span>
       </Badge>
     </div>
@@ -21,12 +21,12 @@ exports[`Storyshots Simple/ItemHeader with name 1`] = `
 <CardHeader tag={"div"}>
   <div className={"card-header"}>
     <div className={"item-header"}>
-      <FormInput className={"item-name-input"} value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"}>
-        <input value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} className={"item-name-input form-control"} />
+      <FormInput className={"item-name-input"} value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} onClick={"function"}>
+        <input value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
       </FormInput>
       <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
         <span className={"item-time-pill badge badge-secondary badge-pill"}>
-          NaN days
+          NaN hours
         </span>
       </Badge>
     </div>
@@ -38,12 +38,12 @@ exports[`Storyshots Simple/ItemHeader with name and created 1`] = `
 <CardHeader tag={"div"}>
   <div className={"card-header"}>
     <div className={"item-header"}>
-      <FormInput className={"item-name-input"} value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"}>
-        <input value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} className={"item-name-input form-control"} />
+      <FormInput className={"item-name-input"} value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} onClick={"function"}>
+        <input value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
       </FormInput>
       <Badge className={"item-time-pill"} pill={true} theme={"secondary"} outline={false} tag={"span"}>
         <span className={"item-time-pill badge badge-secondary badge-pill"}>
-          NaN days
+          17972 days
         </span>
       </Badge>
     </div>

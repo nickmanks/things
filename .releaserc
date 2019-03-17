@@ -2,5 +2,16 @@
     "branch": "master",
     "dryRun": false,
     "debug": true,
-    "pkgRoot": "build/pkg"
+    "pkgRoot": "build/pkg",
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        "@semantic-release/release-notes-generator",
+        [
+            "@semantic-release/npm",
+            {
+                "npmPublish": false
+            }
+        ],
+        "@semantic-release/github"
+    ]
 }

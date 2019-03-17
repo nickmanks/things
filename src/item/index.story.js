@@ -17,7 +17,7 @@ storiesOf('Connected/Item', module)
           category: 'Ingredients',
           description: '1x Tomato, 1x Onion, 1x Spaghetti',
           status: 'ready',
-          created: '3h'
+          created: 10000
         }}
 
         store={store}
@@ -34,7 +34,7 @@ storiesOf('Connected/Item', module)
           category: 'Ingredients',
           description: '1x Tomato, 1x Onion, 1x Spaghetti',
           status: 'in progress',
-          created: '3h'
+          created: 10000
         }}
 
         store={store}
@@ -51,7 +51,7 @@ storiesOf('Connected/Item', module)
           category: 'Ingredients',
           description: '1x Tomato, 1x Onion, 1x Spaghetti',
           status: 'done',
-          created: '3h'
+          created: 10000
         }}
 
         store={store}

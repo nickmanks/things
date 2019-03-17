@@ -4,7 +4,6 @@ import thunk from 'redux-thunk';
 import reducers from '../reducers';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'shards-ui/dist/css/shards.min.css';
-import 'hamburgers/dist/hamburgers.min.css';
 import './theme.scss';
 
 

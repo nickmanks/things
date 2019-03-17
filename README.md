@@ -36,13 +36,13 @@
 
   ## Table of Contents
 
--   [Background](#background)
 -   [Install](#install)
 -   [Usage](#usage)
 -   [Build & Package](#build-and-package)
 -   [Dev Tools](#dev-tools)
 -   [ESLint](#eslint-installation)
 -   [Testing](#running-tests)
+-   [Integration](#integration)
 -   [Contributing](#contributing)
 -   [App Configuration](#configuration)
 -   [Maintainers](#maintainers)
@@ -178,9 +178,17 @@ where FILE_PATH_TO_MATCH is the path to match (e.g. - app/reducer)
 >npx run jest src\\app\\reducer.test.js
 >```
 
+## Integration
+
+PRs must pass Travis.com integration tests before being able to merge to master, which will include a full test suit, lint and code coverage.
 
 ## Contributing
 Pull requests and commits follow commitizen conventional commit guidelines.
+>```bash
+> git add -A
+> npx git-cz
+> git push origin <branch>
+> ```
 
 
 ## Configuration

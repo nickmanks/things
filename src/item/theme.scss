@@ -33,13 +33,18 @@
   cursor: pointer;
 }
 
-// .item:hover {
-//   border: 1px solid #3594ff;
-// }
-
 .item-body {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.item-body-bottom-fade {
+  position: absolute;
+  bottom: 59px;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background-image: linear-gradient(#fff0, #ffffff);
 }
 
 .outline-item {

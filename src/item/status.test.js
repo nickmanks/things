@@ -10,11 +10,15 @@ describe('<ItemStatus />', ()=> {
     const wrapper = unwrappedShallow(
       <ItemStatus status={'ready'} onUpdateStatus={updateFn} />
     );
+    const evt = {
+      stopPropagation: jest.fn()
+    };
 
     wrapper.find(Badge)
       .findWhere((item)=> item.prop('theme') === 'danger')
-      .prop('onClick')();
+      .prop('onClick')(evt);
 
+    expect(evt.stopPropagation).toHaveBeenCalled();
     expect(updateFn).toHaveBeenCalledWith('ready');
   });
 
@@ -23,11 +27,15 @@ describe('<ItemStatus />', ()=> {
     const wrapper = unwrappedShallow(
       <ItemStatus status={'in progress'} onUpdateStatus={updateFn} />
     );
+    const evt = {
+      stopPropagation: jest.fn()
+    };
 
     wrapper.find(Badge)
       .findWhere((item)=> item.prop('theme') === 'warning')
-      .prop('onClick')();
+      .prop('onClick')(evt);
 
+    expect(evt.stopPropagation).toHaveBeenCalled();
     expect(updateFn).toHaveBeenCalledWith('in progress');
   });
 
@@ -36,11 +44,15 @@ describe('<ItemStatus />', ()=> {
     const wrapper = unwrappedShallow(
       <ItemStatus status={'done'} onUpdateStatus={updateFn} />
     );
+    const evt = {
+      stopPropagation: jest.fn()
+    };
 
     wrapper.find(Badge)
       .findWhere((item)=> item.prop('theme') === 'success')
-      .prop('onClick')();
+      .prop('onClick')(evt);
 
+    expect(evt.stopPropagation).toHaveBeenCalled();
     expect(updateFn).toHaveBeenCalledWith('done');
   });
 });

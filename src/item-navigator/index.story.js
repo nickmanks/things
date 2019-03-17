@@ -104,4 +104,24 @@ storiesOf('Connected/ItemNavigator', module)
         <ItemNavigator store={store} />
       </Provider>
     );
+  })
+  .add('with archived showing', ()=> {
+    const store = storyStore({
+      things: {
+        items: {
+          ['test-id-1']: testItems['test-id-1'],
+          ['test-id-2']: testItems['test-id-2'],
+          ['test-id-3']: testItems['test-id-3'],
+          ['test-id-4']: testItems['test-id-4'],
+          ['test-id-5']: testItems['test-id-5']
+        },
+        sortType: 'archived'
+      }
+    });
+
+    return (
+      <Provider store={store}>
+        <ItemNavigator store={store} />
+      </Provider>
+    );
   });

@@ -15,7 +15,10 @@ const ItemStatus = ({status, onUpdateStatus})=> (
         className={'item-status-pill'}
         pill
         theme={status === READY_STATUS ? 'danger' : 'light'}
-        onClick={()=> onUpdateStatus(READY_STATUS)}
+        onClick={(evt)=> {
+          evt.stopPropagation();
+          onUpdateStatus(READY_STATUS);
+        }}
       >
         Ready
       </Badge>
@@ -23,7 +26,10 @@ const ItemStatus = ({status, onUpdateStatus})=> (
         className={'item-status-pill'}
         pill
         theme={status === PROGRESS_STATUS ? 'warning' : 'light'}
-        onClick={()=> onUpdateStatus(PROGRESS_STATUS)}
+        onClick={(evt)=> {
+          evt.stopPropagation();
+          onUpdateStatus(PROGRESS_STATUS);
+        }}
       >
         In Progress
       </Badge>
@@ -31,7 +37,10 @@ const ItemStatus = ({status, onUpdateStatus})=> (
         className={'item-status-pill'}
         pill
         theme={status === DONE_STATUS ? 'success' : 'light'}
-        onClick={()=> onUpdateStatus(DONE_STATUS)}
+        onClick={(evt)=> {
+          evt.stopPropagation();
+          onUpdateStatus(DONE_STATUS);
+        }}
       >
         Done
       </Badge>

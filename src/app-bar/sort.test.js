@@ -4,6 +4,7 @@ import Sort from './sort';
 import {unwrappedShallow, testStore} from '../testing/helpers';
 
 
+// eslint-disable-next-line max-statements
 describe('<Sort />', ()=> {
   it('reflects open state from store', ()=> {
     const store = testStore({
@@ -64,6 +65,34 @@ describe('<Sort />', ()=> {
     expect(store.getState().things.sortType).toBe('status');
   });
 
+  it('sets sort state due if already set to null and due clicked', ()=> {
+    const store = testStore({
+      things: {sortOpen: true, sortType: null}
+    });
+    const wrapper = unwrappedShallow(<Sort store={store} />);
+
+    wrapper.find(DropdownItem)
+      .findWhere((item)=> item.prop('id') === 'due')
+      .prop('onClick')();
+
+    expect(store.getState().things.sortType).toBe('due');
+  });
+
+  it(
+    'sets sort state archived if already set to null and archived clicked',
+    ()=> {
+      const store = testStore({
+        things: {sortOpen: true, sortType: null}
+      });
+      const wrapper = unwrappedShallow(<Sort store={store} />);
+
+      wrapper.find(DropdownItem)
+        .findWhere((item)=> item.prop('id') === 'archived')
+        .prop('onClick')();
+
+      expect(store.getState().things.sortType).toBe('archived');
+    });
+
   it('sets sort state null if already set to newest and newest clicked', ()=> {
     const store = testStore({
       things: {sortOpen: true, sortType: 'newest'}
@@ -102,4 +131,32 @@ describe('<Sort />', ()=> {
 
     expect(store.getState().things.sortType).toBe(null);
   });
+
+  it('sets sort state null if already set to due and due clicked', ()=> {
+    const store = testStore({
+      things: {sortOpen: true, sortType: 'due'}
+    });
+    const wrapper = unwrappedShallow(<Sort store={store} />);
+
+    wrapper.find(DropdownItem)
+      .findWhere((item)=> item.prop('id') === 'due')
+      .prop('onClick')();
+
+    expect(store.getState().things.sortType).toBe(null);
+  });
+
+  it(
+    'sets sort state null if already set to archived and archived clicked',
+    ()=> {
+      const store = testStore({
+        things: {sortOpen: true, sortType: 'archived'}
+      });
+      const wrapper = unwrappedShallow(<Sort store={store} />);
+
+      wrapper.find(DropdownItem)
+        .findWhere((item)=> item.prop('id') === 'archived')
+        .prop('onClick')();
+
+      expect(store.getState().things.sortType).toBe(null);
+    });
 });

@@ -10,10 +10,10 @@ import './theme.scss';
 
 
 const Item = ({item, onNameChange, onUpdateStatus, onEditItem})=> {
-  const {name, category, description, created, status} = item;
+  const {name, category, description, due, created, status} = item;
 
   return (
-    <Card className={'item'}>
+    <Card className={'item'} onClick={()=> onEditItem(item)}>
       <ItemHeader
         name={name}
         created={created}
@@ -22,7 +22,7 @@ const Item = ({item, onNameChange, onUpdateStatus, onEditItem})=> {
       <ItemBody
         category={category}
         description={description}
-        onEditItem={()=> onEditItem(item)}
+        due={due}
       />
       <ItemStatus
         status={status}

@@ -1,4 +1,10 @@
-import {SORT_NEWEST, SORT_OLDEST, SORT_STATUS} from '../app-bar/sort';
+import {
+  SORT_NEWEST,
+  SORT_OLDEST,
+  SORT_STATUS,
+  SORT_DUE,
+  SORT_ARCHIVED
+} from '../app-bar/sort';
 
 
 // eslint-disable-next-line max-statements
@@ -25,6 +31,7 @@ export const scoreItems = (searchTerm)=> (item)=> {
   return {item, score: -1};
 };
 
+// eslint-disable-next-line max-statements
 export const sortItems = (sortType)=> {
   if (sortType === SORT_NEWEST) {
     return (a, b)=> b.item.created - a.item.created;
@@ -52,6 +59,14 @@ export const sortItems = (sortType)=> {
       return 1;
     };
   }
-  
+
+  if (sortType === SORT_DUE) {
+    return (a, b)=> a.item.due - b.item.due;
+  }
+
+  if (sortType === SORT_ARCHIVED) {
+    return (a, b)=> a.item.archivedDate - b.item.archivedDate;
+  }
+
   return (a, b)=> b.score - a.score;
 };

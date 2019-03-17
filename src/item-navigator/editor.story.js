@@ -19,6 +19,17 @@ storiesOf('Connected/EditorModal', module)
       </Provider>
     );
   })
+  .add('with selected archived item', ()=> {
+    const store = storyStore({
+      things: {items: testItems, selected: 'test-id-5'}
+    });
+
+    return (
+      <Provider store={store}>
+        <EditorModal store={store} />
+      </Provider>
+    );
+  })
   .add('with no selected item', ()=> {
     const store = storyStore({
       things: {items: testItems, selected: null}

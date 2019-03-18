@@ -19,3 +19,6 @@ applify.config.babel.js
 
 # Test config
 src/private-config.js
+
+# Serverless
+.serverless

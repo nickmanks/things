@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Connected/Item with done item 1`] = `
+<Item item={{"name":"Buy Groceries","category":"Ingredients","description":"1x Tomato, 1x Onion, 1x Spaghetti","status":"done","created":10000}} store={{}} onNameChange={"function"} onUpdateStatus={"function"} onEditItem={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Card className={"item"} onClick={"function"} tag={"div"}>
+    <div onClick={"function"} className={"item card"}>
+      <ItemHeader name={"Buy Groceries"} created={10000} onNameChange={"function"}>
+        <CardHeader tag={"div"}>
+          <div className={"card-header"}>
+            <div className={"item-header"}>
+              <FormInput className={"item-name-input"} value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"}>
+                <input value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
+              </FormInput>
+              <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
+                <span className={"item-time-pill badge badge-light badge-pill"}>
+                  17973d
+                </span>
+              </Badge>
+            </div>
+          </div>
+        </CardHeader>
+      </ItemHeader>
+      <ItemBody category={"Ingredients"} description={"1x Tomato, 1x Onion, 1x Spaghetti"}>
+        <CardBody className={"item-body"} tag={"div"}>
+          <div className={"item-body card-body"}>
+            <div>
+              <b>
+                Ingredients
+              </b>
+              <div className={"item-description"}>
+                1x Tomato, 1x Onion, 1x Spaghetti
+              </div>
+            </div>
+            <div className={"item-body-bottom-fade"} />
+          </div>
+        </CardBody>
+      </ItemBody>
+      <ItemStatus status={"done"} onUpdateStatus={"function"}>
+        <CardFooter tag={"div"}>
+          <div className={"card-footer"}>
+            <div className={"item-status"}>
+              <Badge className={"item-status-pill"} pill={true} theme={"light"} onClick={"function"} outline={false} tag={"span"}>
+                <span onClick={"function"} className={"item-status-pill badge badge-light badge-pill"}>
+                  Ready
+                </span>
+              </Badge>
+              <Badge className={"item-status-pill"} pill={true} theme={"light"} onClick={"function"} outline={false} tag={"span"}>
+                <span onClick={"function"} className={"item-status-pill badge badge-light badge-pill"}>
+                  In Progress
+                </span>
+              </Badge>
+              <Badge className={"item-status-pill"} pill={true} theme={"success"} onClick={"function"} outline={false} tag={"span"}>
+                <span onClick={"function"} className={"item-status-pill badge badge-success badge-pill"}>
+                  Done
+                </span>
+              </Badge>
+            </div>
+          </div>
+        </CardFooter>
+      </ItemStatus>
+    </div>
+  </Card>
+</Item>
+`;
+
+exports[`Storyshots Connected/Item with in progress item 1`] = `
+<Item item={{"name":"Buy Groceries","category":"Ingredients","description":"1x Tomato, 1x Onion, 1x Spaghetti","status":"in progress","created":10000}} store={{}} onNameChange={"function"} onUpdateStatus={"function"} onEditItem={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Card className={"item"} onClick={"function"} tag={"div"}>
+    <div onClick={"function"} className={"item card"}>
+      <ItemHeader name={"Buy Groceries"} created={10000} onNameChange={"function"}>
+        <CardHeader tag={"div"}>
+          <div className={"card-header"}>
+            <div className={"item-header"}>
+              <FormInput className={"item-name-input"} value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"}>
+                <input value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
+              </FormInput>
+              <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
+                <span className={"item-time-pill badge badge-light badge-pill"}>
+                  17973d
+                </span>
+              </Badge>
+            </div>
+          </div>
+        </CardHeader>
+      </ItemHeader>
+      <ItemBody category={"Ingredients"} description={"1x Tomato, 1x Onion, 1x Spaghetti"}>
+        <CardBody className={"item-body"} tag={"div"}>
+          <div className={"item-body card-body"}>
+            <div>
+              <b>
+                Ingredients
+              </b>
+              <div className={"item-description"}>
+                1x Tomato, 1x Onion, 1x Spaghetti
+              </div>
+            </div>
+            <div className={"item-body-bottom-fade"} />
+          </div>
+        </CardBody>
+      </ItemBody>
+      <ItemStatus status={"in progress"} onUpdateStatus={"function"}>
+        <CardFooter tag={"div"}>
+          <div className={"card-footer"}>
+            <div className={"item-status"}>
+              <Badge className={"item-status-pill"} pill={true} theme={"light"} onClick={"function"} outline={false} tag={"span"}>
+                <span onClick={"function"} className={"item-status-pill badge badge-light badge-pill"}>
+                  Ready
+                </span>
+              </Badge>
+              <Badge className={"item-status-pill"} pill={true} theme={"warning"} onClick={"function"} outline={false} tag={"span"}>
+                <span onClick={"function"} className={"item-status-pill badge badge-warning badge-pill"}>
+                  In Progress
+                </span>
+              </Badge>
+              <Badge className={"item-status-pill"} pill={true} theme={"light"} onClick={"function"} outline={false} tag={"span"}>
+                <span onClick={"function"} className={"item-status-pill badge badge-light badge-pill"}>
+                  Done
+                </span>
+              </Badge>
+            </div>
+          </div>
+        </CardFooter>
+      </ItemStatus>
+    </div>
+  </Card>
+</Item>
+`;
+
+exports[`Storyshots Connected/Item with in ready item 1`] = `
+<Item item={{"name":"Buy Groceries","category":"Ingredients","description":"1x Tomato, 1x Onion, 1x Spaghetti","status":"ready","created":10000}} store={{}} onNameChange={"function"} onUpdateStatus={"function"} onEditItem={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Card className={"item"} onClick={"function"} tag={"div"}>
+    <div onClick={"function"} className={"item card"}>
+      <ItemHeader name={"Buy Groceries"} created={10000} onNameChange={"function"}>
+        <CardHeader tag={"div"}>
+          <div className={"card-header"}>
+            <div className={"item-header"}>
+              <FormInput className={"item-name-input"} value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"}>
+                <input value={"Buy Groceries"} placeholder={"Buy Groceries"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
+              </FormInput>
+              <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
+                <span className={"item-time-pill badge badge-light badge-pill"}>
+                  17973d
+                </span>
+              </Badge>
+            </div>
+          </div>
+        </CardHeader>
+      </ItemHeader>
+      <ItemBody category={"Ingredients"} description={"1x Tomato, 1x Onion, 1x Spaghetti"}>
+        <CardBody className={"item-body"} tag={"div"}>
+          <div className={"item-body card-body"}>
+            <div>
+              <b>
+                Ingredients
+              </b>
+              <div className={"item-description"}>
+                1x Tomato, 1x Onion, 1x Spaghetti
+              </div>
+            </div>
+            <div className={"item-body-bottom-fade"} />
+          </div>
+        </CardBody>
+      </ItemBody>
+      <ItemStatus status={"ready"} onUpdateStatus={"function"}>
+        <CardFooter tag={"div"}>
+          <div className={"card-footer"}>
+            <div className={"item-status"}>
+              <Badge className={"item-status-pill"} pill={true} theme={"danger"} onClick={"function"} outline={false} tag={"span"}>
+                <span onClick={"function"} className={"item-status-pill badge badge-danger badge-pill"}>
+                  Ready
+                </span>
+              </Badge>
+              <Badge className={"item-status-pill"} pill={true} theme={"light"} onClick={"function"} outline={false} tag={"span"}>
+                <span onClick={"function"} className={"item-status-pill badge badge-light badge-pill"}>
+                  In Progress
+                </span>
+              </Badge>
+              <Badge className={"item-status-pill"} pill={true} theme={"light"} onClick={"function"} outline={false} tag={"span"}>
+                <span onClick={"function"} className={"item-status-pill badge badge-light badge-pill"}>
+                  Done
+                </span>
+              </Badge>
+            </div>
+          </div>
+        </CardFooter>
+      </ItemStatus>
+    </div>
+  </Card>
+</Item>
+`;

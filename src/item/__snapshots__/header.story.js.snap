@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Simple/ItemHeader with created 1`] = `
+<CardHeader tag={"div"}>
+  <div className={"card-header"}>
+    <div className={"item-header"}>
+      <FormInput className={"item-name-input"} onChange={"function"} onClick={"function"}>
+        <input onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
+      </FormInput>
+      <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
+        <span className={"item-time-pill badge badge-light badge-pill"}>
+          17973d
+        </span>
+      </Badge>
+    </div>
+  </div>
+</CardHeader>
+`;
+
+exports[`Storyshots Simple/ItemHeader with name 1`] = `
+<CardHeader tag={"div"}>
+  <div className={"card-header"}>
+    <div className={"item-header"}>
+      <FormInput className={"item-name-input"} value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} onClick={"function"}>
+        <input value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
+      </FormInput>
+      <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
+        <span className={"item-time-pill badge badge-light badge-pill"}>
+          d
+        </span>
+      </Badge>
+    </div>
+  </div>
+</CardHeader>
+`;
+
+exports[`Storyshots Simple/ItemHeader with name and created 1`] = `
+<CardHeader tag={"div"}>
+  <div className={"card-header"}>
+    <div className={"item-header"}>
+      <FormInput className={"item-name-input"} value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} onClick={"function"}>
+        <input value={"Thing to do!"} placeholder={"Thing to do!"} onChange={"function"} onClick={"function"} className={"item-name-input form-control"} />
+      </FormInput>
+      <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
+        <span className={"item-time-pill badge badge-light badge-pill"}>
+          17973d
+        </span>
+      </Badge>
+    </div>
+  </div>
+</CardHeader>
+`;

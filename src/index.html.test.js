@@ -47,7 +47,7 @@ describe('index.html', ()=> {
           <SecurityMeta />
           <ViewportMeta />
           <SocialMeta
-            title="Todo Awesome"
+            title="Things - Get them done!"
             appUrl="undefined"
             description={
               'An awesome todo application'

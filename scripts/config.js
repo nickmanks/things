@@ -32,12 +32,12 @@ const getDeploymentEnv = async (argv)=> {
 
   if (deployEnv === 'auto') {
     return {
-      deployEnv: 'undefined',
-      deployPath: 'undefined'
+      deployEnv: 'app.todoawesome.io',
+      deployPath: 'todo'
     };
   }
 
-  return {deployEnv, deployPath: deployPath || 'undefined'};
+  return {deployEnv, deployPath: deployPath || 'todo'};
 };
 
 
@@ -50,7 +50,7 @@ const main = async (process)=> {
     })
     .option('deploy-env', {
       describe: 'The environment to deploy to.',
-      default: 'undefined/undefined'
+      default: 'app.todoawesome.io/todo'
     })
     .options('node-env', {
       describe: 'The env to used by babel and webpack for building code.',

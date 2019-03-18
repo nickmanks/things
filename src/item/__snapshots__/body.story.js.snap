@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Simple/ItemBody with category 1`] = `
+<CardBody className={"item-body"} tag={"div"}>
+  <div className={"item-body card-body"}>
+    <div>
+      <b>
+        Ingredients
+      </b>
+      <div className={"item-description"} />
+    </div>
+    <div className={"item-body-bottom-fade"} />
+  </div>
+</CardBody>
+`;
+
+exports[`Storyshots Simple/ItemBody with category and description 1`] = `
+<CardBody className={"item-body"} tag={"div"}>
+  <div className={"item-body card-body"}>
+    <div>
+      <b>
+        Ingredients
+      </b>
+      <div className={"item-description"}>
+        1x Tomato, 1x Onion
+      </div>
+    </div>
+    <div className={"item-body-bottom-fade"} />
+  </div>
+</CardBody>
+`;
+
+exports[`Storyshots Simple/ItemBody with category, description and date 1`] = `
+<CardBody className={"item-body"} tag={"div"}>
+  <div className={"item-body card-body"}>
+    <CardSubtitle className={"item-subtitle"} tag={"h6"}>
+      <h6 className={"item-subtitle card-subtitle text-muted"}>
+        Due 
+        about 49 years ago
+      </h6>
+    </CardSubtitle>
+    <div>
+      <b>
+        Ingredients
+      </b>
+      <div className={"item-description"}>
+        1x Tomato, 1x Onion
+      </div>
+    </div>
+    <div className={"item-body-bottom-fade"} />
+  </div>
+</CardBody>
+`;
+
+exports[`Storyshots Simple/ItemBody with description 1`] = `
+<CardBody className={"item-body"} tag={"div"}>
+  <div className={"item-body card-body"}>
+    <div>
+      <b />
+      <div className={"item-description"}>
+        This is a new description
+      </div>
+    </div>
+    <div className={"item-body-bottom-fade"} />
+  </div>
+</CardBody>
+`;
+
+exports[`Storyshots Simple/ItemBody with due 1`] = `
+<CardBody className={"item-body"} tag={"div"}>
+  <div className={"item-body card-body"}>
+    <CardSubtitle className={"item-subtitle"} tag={"h6"}>
+      <h6 className={"item-subtitle card-subtitle text-muted"}>
+        Due 
+        about 49 years ago
+      </h6>
+    </CardSubtitle>
+    <div>
+      <b />
+      <div className={"item-description"} />
+    </div>
+    <div className={"item-body-bottom-fade"} />
+  </div>
+</CardBody>
+`;

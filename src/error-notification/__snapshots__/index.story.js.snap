@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Connected/ErrorNotification with errors 1`] = `
+<ErrorNotification store={{}} message={"Unable to connect at this time."} removeError={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Fade in={true} className={"fade-in-error"} mountOnEnter={false} unmountOnExit={false} appear={true} enter={true} exit={true} onEnter={"function"} onEntering={"function"} onEntered={"function"} onExit={"function"} onExiting={"function"} onExited={"function"} tag={"div"} baseClass={"fade"} baseClassActive={"show"} timeout={150}>
+    <Transition in={true} mountOnEnter={false} unmountOnExit={false} appear={true} enter={true} exit={true} timeout={150} onEnter={"function"} onEntering={"function"} onEntered={"function"} onExit={"function"} onExiting={"function"} onExited={"function"} />
+  </Fade>
+</ErrorNotification>
+`;
+
+exports[`Storyshots Connected/ErrorNotification with no errors 1`] = `
+<ErrorNotification store={{}} message={null} removeError={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Fade in={false} className={"fade-in-error"} mountOnEnter={false} unmountOnExit={false} appear={true} enter={true} exit={true} onEnter={"function"} onEntering={"function"} onEntered={"function"} onExit={"function"} onExiting={"function"} onExited={"function"} tag={"div"} baseClass={"fade"} baseClassActive={"show"} timeout={150}>
+    <Transition in={false} mountOnEnter={false} unmountOnExit={false} appear={true} enter={true} exit={true} timeout={150} onEnter={"function"} onEntering={"function"} onEntered={"function"} onExit={"function"} onExiting={"function"} onExited={"function"} />
+  </Fade>
+</ErrorNotification>
+`;

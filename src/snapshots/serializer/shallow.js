@@ -54,18 +54,13 @@ const serializeNode = (node, inner, depth, options)=> {
 const serializeFunctionWrapper = (wrapper, depth, options)=> {
   const node = wrapper.getNodeInternal();
 
-  if (
-    (node.type.contextTypes && node.type.contextTypes.store)
-    || node.type.name === 'Portal'
-  ) {
+  if (node.type.contextTypes || node.type.name === 'Portal') {
     // If we are expecting a store this is a non-root connected component.
     // Just serialize the name. It should be tested independently.
     return serializeNode(node, '', depth, options);
   }
+
   const childWrapper = wrapper.dive();
-  if (node.type.name === 'Themed') {
-    return serializeWrapper(childWrapper, depth, options);
-  }
   const childSerialized = serializeWrapper(childWrapper, depth + 1, options);
   return serializeNode(node, childSerialized, depth, options);
 };
@@ -92,10 +87,6 @@ serializeWrapper = (wrapper, depth, options)=> {
 
   if (isPrimitive(node)) {
     return leftpad(node, depth);
-  }
-
-  if (isNil(node) || node === false) {
-    return '';
   }
 
   if (isFunctionalComponent(node)) {
@@ -134,4 +125,3 @@ const serializeRootWrapper = (wrapper, options)=> {
 
 export const shallowSerialize =
   (wrapper, options = {})=> serializeRootWrapper(wrapper, options);
-

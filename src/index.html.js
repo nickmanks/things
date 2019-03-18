@@ -6,9 +6,12 @@ import ViewportMeta from './html/viewport';
 import SocialMeta from './html/social';
 import VersionMeta from './html/version';
 import render from './html/render';
-import theme from './index.scss';
 import App from './app';
 import {store} from './store';
+
+import theme from './index.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'shards-ui/dist/css/shards.min.css';
 
 
 const containerId = 'root';
@@ -27,7 +30,7 @@ const Html = ({scripts, styles, version, appUrl})=> (
       <ViewportMeta />
 
       <SocialMeta
-        title="Todo Awesome"
+        title="Things - Get them done!"
         appUrl={appUrl}
         description="An awesome todo application"
       />

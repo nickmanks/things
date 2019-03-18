@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Simple/Brand mobile logo and name 1`] = `
+<a className={"app-bar-logo"}>
+  <img className={"app-bar-logo-img-mobile"} src={"favicon.png"} />
+</a>
+`;
+
+exports[`Storyshots Simple/Brand things logo and name 1`] = `
+<a className={"app-bar-logo"}>
+  <img className={"app-bar-logo-img"} src={"favicon.png"} />
+  <h4 className={"app-bar-logo-name"}>
+     things 
+  </h4>
+</a>
+`;

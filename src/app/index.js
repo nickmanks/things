@@ -5,6 +5,7 @@ import AppBar from '../app-bar';
 import ItemNavigator from '../item-navigator';
 import ItemEditor from '../item-editor';
 import PersistenceManager from '../persistence';
+import ErrorNotification from '../error-notification';
 import './theme.scss';
 
 
@@ -23,6 +24,7 @@ const App = ({loaded})=> (
         </div>
       )}
     <PersistenceManager />
+    <ErrorNotification />
   </Fragment>
 );
 App.propTypes = {

@@ -1,7 +1,7 @@
 
 
 export const setError = (error)=> ({
-  type: 'persistence/set-errors',
+  type: 'persistence/set-error',
   error
 });
 
@@ -17,4 +17,8 @@ export const setDone = (id)=> ({
 
 export const setLoaded = ()=> ({
   type: 'persistence/set-loaded'
+});
+
+export const clearError = ()=> ({
+  type: 'persistence/clear-error'
 });

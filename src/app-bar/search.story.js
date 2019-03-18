@@ -11,4 +11,9 @@ storiesOf('Connected/Search', module)
     const store = storyStore();
 
     return (<Search store={store} />);
+  })
+  .add('mobile search bar', ()=> {
+    const store = storyStore();
+
+    return (<Search store={store} mobile={true} />);
   });

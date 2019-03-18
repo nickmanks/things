@@ -6,6 +6,7 @@ import {setError, setDone, setProcessing, setLoaded} from './actions';
 import {setItem} from '../things/actions';
 
 
+// TODO refactor each of the effects into individual functions
 const PersistenceManager = ({
   queued, processing, onError, onProcessed, onNext, onLoad
 })=> {
@@ -20,7 +21,12 @@ const PersistenceManager = ({
   // After loaded items have been registered add them to store
   useEffect(()=> {
     if (loadedItems) {
-      onLoad(loadedItems);
+      const {error} = loadedItems;
+      if (error) {
+        onError(error);
+      } else {
+        onLoad(loadedItems);
+      }
     }
   }, [loadedItems]);
 
@@ -49,18 +55,19 @@ const PersistenceManager = ({
   }, [processing]);
 
   // Once processed moved to done and process a new item from the queue
+  // If error continue with other updates
   useEffect(()=> {
     if (processed) {
       const {error} = processed;
 
       if (error) {
         onError(error);
-      } else {
-        onProcessed(processing[0]);
+      }
 
-        if (queued[0]) {
-          onNext(queued[0]);
-        }
+      onProcessed(processing[0]);
+
+      if (queued[0]) {
+        onNext(queued[0]);
       }
     }
   }, [processed]);

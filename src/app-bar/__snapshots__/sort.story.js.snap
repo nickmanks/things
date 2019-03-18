@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Connected/Sort mobile open with sort archived 1`] = `
+<SortDropdown store={{}} mobile={true} open={true} sortType={"archived"} onSetSort={"function"} setOpen={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Dropdown className={"app-bar-dropdown"} open={true} toggle={"function"} direction={"down"} nav={false}>
+    <ContextProvider value={{"open":true,"direction":"down","nav":false}}>
+      <Manager tag={"div"}>
+        <ContextProvider value={{}}>
+          <ContextConsumer>
+            <Component />
+          </ContextConsumer>
+        </ContextProvider>
+      </Manager>
+    </ContextProvider>
+  </Dropdown>
+</SortDropdown>
+`;
+
 exports[`Storyshots Connected/Sort open with no sort 1`] = `
 <SortDropdown store={{}} open={true} sortType={null} onSetSort={"function"} setOpen={"function"} storeSubscription={{"store":{},"listeners":{}}}>
   <Dropdown open={true} toggle={"function"} direction={"down"} nav={false}>

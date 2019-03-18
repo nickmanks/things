@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Connected/App with multiple items 1`] = `
+exports[`Storyshots Connected/App persistence loading 1`] = `
 <App store={{}} loaded={false} dispatch={"function"} storeSubscription={{"store":{},"listeners":{}}}>
   <Fragment>
     <Connect(AppBar) />
@@ -8,6 +8,21 @@ exports[`Storyshots Connected/App with multiple items 1`] = `
       <div className={"app-spinner"} />
     </div>
     <Connect(PersistenceManager) />
+    <Connect(ErrorNotification) />
+  </Fragment>
+</App>
+`;
+
+exports[`Storyshots Connected/App with multiple items 1`] = `
+<App store={{}} loaded={true} dispatch={"function"} storeSubscription={{"store":{},"listeners":{}}}>
+  <Fragment>
+    <Connect(AppBar) />
+    <div className={"app-container"}>
+      <Connect(ItemNavigator) />
+      <Connect(ItemEditor) />
+    </div>
+    <Connect(PersistenceManager) />
+    <Connect(ErrorNotification) />
   </Fragment>
 </App>
 `;

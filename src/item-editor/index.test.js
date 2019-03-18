@@ -91,4 +91,17 @@ describe('<EditorModal />', ()=> {
       store.getState().things.items['test-id-1'].archived
     ).toBe(true);
   });
+
+  it('deletes the selected item when delete button is clicked', ()=> {
+    const store = testStore({
+      things: {items: testItems, selected: 'test-id-1'}
+    });
+    const wrapper = unwrappedShallow(<EditorModal store={store} />);
+
+    wrapper.find(EditorButtons).prop('onDelete')(testItems['test-id-1']);
+
+    expect(
+      store.getState().things.items['test-id-1']
+    ).toBe(undefined);
+  });
 });

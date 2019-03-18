@@ -35,12 +35,16 @@ export const service = ({
   },
 
   loadItems: async (setLoaded)=> {
-    const response = await fetch(
-      getListItemsEndpoint(),
-      getFetchOptions('GET')
-    );
-    const items = await response.json();
-    setLoaded(items);
+    try {
+      const response = await fetch(
+        getListItemsEndpoint(),
+        getFetchOptions('GET')
+      );
+      const items = await response.json();
+      setLoaded(items);
+    } catch (error) {
+      setLoaded({error});
+    }
   },
 
   deleteItem: async (update, setProcessed)=> {

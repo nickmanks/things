@@ -67,4 +67,14 @@ storiesOf('Connected/Sort', module)
 
     return (<Sort store={store} />);
   })
+  .add('mobile open with sort archived', ()=> {
+    const store = storyStore({
+      things: {
+        sortType: 'archived',
+        sortOpen: true
+      }
+    });
+
+    return (<Sort store={store} mobile={true} />);
+  })
   .add('sort checkbox', ()=> (<CheckBox show={true} />));

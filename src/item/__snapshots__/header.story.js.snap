@@ -9,7 +9,7 @@ exports[`Storyshots Simple/ItemHeader with created 1`] = `
       </FormInput>
       <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
         <span className={"item-time-pill badge badge-light badge-pill"}>
-          17972d
+          17973d
         </span>
       </Badge>
     </div>
@@ -43,7 +43,7 @@ exports[`Storyshots Simple/ItemHeader with name and created 1`] = `
       </FormInput>
       <Badge className={"item-time-pill"} pill={true} theme={"light"} outline={false} tag={"span"}>
         <span className={"item-time-pill badge badge-light badge-pill"}>
-          17972d
+          17973d
         </span>
       </Badge>
     </div>

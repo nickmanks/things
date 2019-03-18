@@ -56,5 +56,10 @@ export default reducer(DefaultState, {
   'persistence/set-loaded': (state)=> ({
     ...state,
     loaded: true
+  }),
+
+  'persistence/clear-error': (state)=> ({
+    ...state,
+    errors: []
   })
 });

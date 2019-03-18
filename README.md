@@ -1,12 +1,12 @@
 
   <p align="center"><img src='./src/favicon.png' height='140' /></p>
   <p align="center">
-    <b> todo-awesome </b>
+    <b> things </b>
   </p>
 
   <p align="center">
   <b>
-  :zap: An awesome todo application
+  :zap: Application todo all the things
   </b>
   </p>
 
@@ -25,7 +25,7 @@
 
   :book: Read the [Quick Start Guide](https://enter-your-docs-guide-url.com)
 
-  :rocket: [Try it out](https://enter-your-site-url.com)
+  :rocket: [Try it out](http:localhost:8080/todo/)
 
   :hatched_chick: Current status: **Alpha**
 
@@ -33,10 +33,9 @@
 
   <p> &nbsp; </p>
 
-  
+
   ## Table of Contents
 
--   [Security](#security)
 -   [Background](#background)
 -   [Install](#install)
 -   [Usage](#usage)
@@ -44,22 +43,11 @@
 -   [Dev Tools](#dev-tools)
 -   [ESLint](#eslint-installation)
 -   [Testing](#running-tests)
+-   [Integration](#integration)
 -   [Contributing](#contributing)
--   [Documentation](#documentation)
 -   [App Configuration](#configuration)
 -   [Maintainers](#maintainers)
--   [Under The Hood](#under-the-hood)
--   [Disclaimer](#disclaimer)
--   [License](#license)
 
-
-## Security
-
-Unauthorised access to this repository, any of its contents is prohibited.
-Permission must be explicitly given from a maintainer.
-
-Do not copy or share this repository, its url, or any of its downloadable
-content unless specified by the owner/org/company policy.
 
 ## Install
 
@@ -71,10 +59,9 @@ Clone the repo and install dependencies:
 > nvm use 10
 > ```
 >
-> Make sure to use the latest version of npm and applify:
+> Make sure to use the latest version of npm:
 > ```bash
 > npm i -g npm
-> npm i -g @skan-io/applify
 > ```
 >
 >
@@ -88,8 +75,8 @@ Clone the repo and install dependencies:
 
 
 ```bash
-  git clone git@github.com:nickmanks/todo-awesome.git
-  cd todo-awesome
+  git clone git@github.com:nickmanks/things.git
+  cd things
   npm ci
   npx run
 ```
@@ -103,11 +90,11 @@ npx run
 ```
 
 >This will run both `webpack` and `storybook` servers.
->Application can be viewed on `localhost:8080`
->Storybook stories can be viewed at `localhost:8000`
+>Application can be viewed on [`localhost:8080/todo/`](http:localhost:8080/todo/).
+>Storybook stories can be viewed at [`localhost:8080/stories/`](http:localhost:8080/stories/)
 
 This runs [webpack's dev server](https://webpack.js.org/configuration/dev-server/)
-with live reloading enabled. You can find it's configuration in [webpack.config.babel.js](./webpack.config.babel.js).
+with live reloading enabled. You can find it's configuration in [webpack.config.babel.js](./webpack.config.babel.js).  Package scripts can be found in [scripts](./scripts/index.js).
 
 Note: If you need to start a dev server supporting all production browsers (last 2 versions,not IE < 11)
 please run `npx run config --node-env=production`.
@@ -159,7 +146,7 @@ npx run test
 
 You will find code coverage results in `build/cov` including a HTML report:
 ```bash
- open ./build/cov/lcov-report/index.html 
+ open ./build/cov/lcov-report/index.html
 ```
 
 
@@ -189,38 +176,35 @@ where FILE_PATH_TO_MATCH is the path to match (e.g. - app/reducer)
 >npx run jest src\\app\\reducer.test.js
 >```
 
+## Integration
 
-## Documentation
+PRs must pass Travis.com integration tests before being able to merge to master, which will include a full test suit, lint and code coverage.
 
-To run the local documentation generator and view the project documentation run:
-
-```bash
-npx run docs
-```
-
-Once started, you can view the docs at [http://localhost:undefined](http://localhost:undefined)
-
-See `@skan-io/code-documentation` repo for details on how to document your code
-to work with the generator.
-
+Once passed semantic-release will also publish a new release of the application with a semantic version.
 
 ## Contributing
 Pull requests and commits follow commitizen conventional commit guidelines.
+>```bash
+> git add -A
+> npx git-cz
+> git push origin <branch>
+> ```
 
 
 ## Configuration
 
+The Todo REST API can be found in [services/todo](./services/todo).
+
+The application uses this serverless development stage lambda functions and
+dynamoDB to supply GET, POST and DELETE todo item endpoints.
+
+Endpoints can be found in the [config](./src/config.js) file.
+
+Many of the configuration files are pre-configured npm modules from [skan-io](https://github.com/skan-io), my other git account.  They help speed up configuration and consistency, for example [@skan-io/babel-config-react](https://github.com/skan-io/babel-config-react) is used to set [babel config]('./babel.config.js').
 
 ## Maintainers
 
-[@nickmanks](https://github.com/nickmanks) 
+[@nickmanks](https://github.com/nickmanks)
 
 
 Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
-
-## Under the Hood
-
-## Disclaimer
-
-Any use of this software by any person will incur no liability on the owner of this software.
-

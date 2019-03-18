@@ -180,6 +180,8 @@ where FILE_PATH_TO_MATCH is the path to match (e.g. - app/reducer)
 
 PRs must pass Travis.com integration tests before being able to merge to master, which will include a full test suit, lint and code coverage.
 
+Once passed semantic-release will also publish a new release of the application with a semantic version.
+
 ## Contributing
 Pull requests and commits follow commitizen conventional commit guidelines.
 >```bash
@@ -198,6 +200,7 @@ dynamoDB to supply GET, POST and DELETE todo item endpoints.
 
 Endpoints can be found in the [config](./src/config.js) file.
 
+Many of the configuration files are pre-configured npm modules from [skan-io](https://github.com/skan-io), my other git account.  They help speed up configuration and consistency, for example [@skan-io/babel-config-react](https://github.com/skan-io/babel-config-react) is used to set [babel config]('./babel.config.js').
 
 ## Maintainers
 

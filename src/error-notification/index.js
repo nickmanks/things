@@ -8,7 +8,7 @@ import {clearError} from '../persistence/actions';
 import './theme.scss';
 
 
-const CONNECTION_ERROR = 'Unable to connect at this time.';
+const CONNECTION_ERROR = 'Service unavailable. Please contact support.';
 
 
 const ErrorNotification = ({message, removeError})=> (

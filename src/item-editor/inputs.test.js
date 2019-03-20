@@ -15,11 +15,15 @@ describe('<EditorInputs />', ()=> {
         onDateChange={dateFn}
       />
     );
+    const date = {
+      getTime: jest.fn(()=> 100)
+    };
 
-    wrapper.find(DatePicker).prop('onChange')('some new date');
+    wrapper.find(DatePicker).prop('onChange')(date);
 
+    expect(date.getTime).toHaveBeenCalled();
     expect(dateFn).toHaveBeenCalledWith(
-      testItems['test-id-1'], 'some new date'
+      testItems['test-id-1'], 100
     );
   });
 

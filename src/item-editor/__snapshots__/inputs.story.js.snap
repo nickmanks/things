@@ -12,30 +12,43 @@ exports[`Storyshots Simple/EditorInputs with multiple items 1`] = `
     <p>
        Due: 
     </p>
-    <DatePicker className={"editor-date-picker"} selected={"2286-11-20T17:46:40.000Z"} onChange={"function"} dateFormat={"dd/MM/yy"} allowSameDay={false} dateFormatCalendar={"LLLL yyyy"} disabled={false} disabledKeyboardNavigation={false} dropdownMode={"scroll"} onFocus={"function"} onBlur={"function"} onKeyDown={"function"} onInputClick={"function"} onSelect={"function"} onClickOutside={"function"} onMonthChange={"function"} preventOpenOnFocus={false} onYearChange={"function"} onInputError={"function"} monthsShown={1} readOnly={false} withPortal={false} shouldCloseOnSelect={true} showTimeSelect={false} showTimeInput={false} strictParsing={false} timeIntervals={30} timeCaption={"Time"} previousMonthButtonLabel={"Previous Month"} nextMonthButtonLabel={"Next month"} timeInputLabel={"Time"} renderDayContents={"function"} inlineFocusSelectedMonth={false}>
-      <PopperComponent hidePopper={true} popperModifiers={{"preventOverflow":{"enabled":true,"escapeWithReference":true,"boundariesElement":"viewport"}}} targetComponent={{"type":"div","key":null,"ref":null,"props":{"className":"react-datepicker__input-container","children":[{"type":"input","key":null,"props":{"type":"text","value":"21/11/86","disabled":false,"className":"editor-date-picker","readOnly":false},"_owner":null,"_store":{}},null]},"_owner":null,"_store":{}}} popperComponent={null} popperPlacement={"bottom-start"} popperProps={{}}>
-        <Manager>
-          <ContextProvider value={{}}>
-            <Reference>
-              <ContextConsumer>
-                <Component />
-              </ContextConsumer>
-            </Reference>
-          </ContextProvider>
-        </Manager>
-      </PopperComponent>
-    </DatePicker>
+    <div className={"editor-date-picker-container"}>
+      <DatePicker className={"editor-date-picker"} selected={"2286-11-20T17:46:40.000Z"} onChange={"function"} dateFormat={"dd/MM/yy"} disabled={false} allowSameDay={false} dateFormatCalendar={"LLLL yyyy"} disabledKeyboardNavigation={false} dropdownMode={"scroll"} onFocus={"function"} onBlur={"function"} onKeyDown={"function"} onInputClick={"function"} onSelect={"function"} onClickOutside={"function"} onMonthChange={"function"} preventOpenOnFocus={false} onYearChange={"function"} onInputError={"function"} monthsShown={1} readOnly={false} withPortal={false} shouldCloseOnSelect={true} showTimeSelect={false} showTimeInput={false} strictParsing={false} timeIntervals={30} timeCaption={"Time"} previousMonthButtonLabel={"Previous Month"} nextMonthButtonLabel={"Next month"} timeInputLabel={"Time"} renderDayContents={"function"} inlineFocusSelectedMonth={false}>
+        <PopperComponent hidePopper={true} popperModifiers={{"preventOverflow":{"enabled":true,"escapeWithReference":true,"boundariesElement":"viewport"}}} targetComponent={{"type":"div","key":null,"ref":null,"props":{"className":"react-datepicker__input-container","children":[{"type":"input","key":null,"props":{"type":"text","value":"21/11/86","disabled":false,"className":"editor-date-picker","readOnly":false},"_owner":null,"_store":{}},null]},"_owner":null,"_store":{}}} popperComponent={null} popperPlacement={"bottom-start"} popperProps={{}}>
+          <Manager>
+            <ContextProvider value={{}}>
+              <Reference>
+                <ContextConsumer>
+                  <Component />
+                </ContextConsumer>
+              </Reference>
+            </ContextProvider>
+          </Manager>
+        </PopperComponent>
+      </DatePicker>
+      <FormCheckbox id={"editor-date-picker-checkbox"} className={"editor-date-picker-checkbox"} checked={true} onChange={"function"}>
+        <label className={"editor-date-picker-checkbox custom-control custom-checkbox"}>
+          <input checked={true} onChange={"function"} id={"editor-date-picker-checkbox"} type={"checkbox"} className={"custom-control-input"} />
+          <label id={"editor-date-picker-checkbox"} className={"custom-control-label"} aria-hidden={"true"} onClick={"function"} />
+          <span className={"custom-control-description"} />
+        </label>
+      </FormCheckbox>
+    </div>
     <p>
        Category: 
     </p>
-    <FormInput className={"editor-category"} value={"thing"} placeholder={"thing"} onChange={"function"}>
-      <input value={"thing"} placeholder={"thing"} onChange={"function"} className={"editor-category form-control"} />
+    <FormInput id={"editor-category"} className={"editor-category"} value={"thing"} placeholder={"Category"} onChange={"function"}>
+      <input id={"editor-category"} value={"thing"} placeholder={"Category"} onChange={"function"} className={"editor-category form-control"} />
     </FormInput>
     <p>
-       Description: 
+      Description (
+      57
+      /
+      500
+      ):
     </p>
-    <FormTextarea value={"Nunc quis nisl ac justo elementum sagittis in quis justo."} placeholder={"Nunc quis nisl ac justo elementum sagittis in quis justo."} onChange={"function"}>
-      <textarea value={"Nunc quis nisl ac justo elementum sagittis in quis justo."} placeholder={"Nunc quis nisl ac justo elementum sagittis in quis justo."} onChange={"function"} className={"form-control"} />
+    <FormTextarea value={"Nunc quis nisl ac justo elementum sagittis in quis justo."} placeholder={"Description"} onChange={"function"}>
+      <textarea value={"Nunc quis nisl ac justo elementum sagittis in quis justo."} placeholder={"Description"} onChange={"function"} className={"form-control"} />
     </FormTextarea>
   </div>
 </ModalBody>

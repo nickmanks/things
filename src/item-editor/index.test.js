@@ -1,5 +1,6 @@
 import React from 'react';
-import {Modal} from 'shards-react';
+import {act} from 'react-test-renderer';
+import {Modal, FormInput} from 'shards-react';
 import EditorModal from '.';
 import EditorInputs from './inputs';
 import EditorButtons from './buttons';
@@ -24,9 +25,7 @@ describe('<EditorModal />', ()=> {
       things: {items: testItems, selected: 'test-id-1'}
     });
     const wrapper = unwrappedShallow(<EditorModal store={store} />);
-    const date = {
-      getTime: jest.fn(()=> 'some new time')
-    };
+    const date = 'some new time';
 
     wrapper.find(EditorInputs)
       .prop('onDateChange')(testItems['test-id-1'], date);
@@ -36,18 +35,45 @@ describe('<EditorModal />', ()=> {
     ).toEqual('some new time');
   });
 
+  it('updates selected item name when onNameChange is called', ()=> {
+    const store = testStore({
+      things: {items: testItems, selected: 'test-id-1'}
+    });
+    const wrapper = unwrappedShallow(<EditorModal store={store} />);
+    const evt = {
+      target: {value: 'some new name'}
+    };
+
+    act(()=> {
+      wrapper.find(FormInput)
+        // eslint-disable-next-line
+        .findWhere((input)=> input.prop('id') === 'editor-name')
+        .prop('onChange')(evt);
+    });
+
+    jest.runAllTimers();
+
+    expect(
+      store.getState().things.items['test-id-1'].name
+    ).toBe('some new name');
+  });
+
   it('updates selected item category when onCategoryChange is called', ()=> {
     const store = testStore({
       things: {items: testItems, selected: 'test-id-1'}
     });
     const wrapper = unwrappedShallow(<EditorModal store={store} />);
 
-    wrapper.find(EditorInputs)
-      .prop('onCategoryChange')(testItems['test-id-1'], 'some new category');
+    act(()=> {
+      wrapper.find(EditorInputs)
+        .prop('onCategoryChange')(testItems['test-id-1'], 'some new category');
+    });
+
+    jest.runAllTimers();
 
     expect(
       store.getState().things.items['test-id-1'].category
-    ).toEqual('some new category');
+    ).toBe('some new category');
   });
 
   it(
@@ -58,14 +84,18 @@ describe('<EditorModal />', ()=> {
       });
       const wrapper = unwrappedShallow(<EditorModal store={store} />);
 
-      wrapper.find(EditorInputs)
-        .prop('onDescriptionChange')(
-          testItems['test-id-1'], 'some new description'
-        );
+      act(()=> {
+        wrapper.find(EditorInputs)
+          .prop('onDescriptionChange')(
+            testItems['test-id-1'], 'some new description'
+          );
+      });
+
+      jest.runAllTimers();
 
       expect(
         store.getState().things.items['test-id-1'].description
-      ).toEqual('some new description');
+      ).toBe('some new description');
     });
 
   it('closes the modal when called from editor buttons', ()=> {

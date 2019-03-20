@@ -6,6 +6,7 @@ import ItemHeader from './header';
 import ItemBody from './body';
 import ItemStatus from './status';
 import {updateItem, selectItem} from '../things/actions';
+import {debouncedUpdate} from '../item-editor';
 import './theme.scss';
 
 
@@ -43,10 +44,7 @@ const mapStateToProps = ()=> ({});
 
 const mapDispatchToProps = (dispatch)=> ({
   onNameChange: (item, newName)=> {
-    dispatch(updateItem({
-      ...item,
-      name: newName
-    }));
+    debouncedUpdate(item, 'name', newName, dispatch);
   },
   onUpdateStatus: (item, newStatus)=> {
     dispatch(updateItem({

@@ -65,6 +65,33 @@ describe('<Sort />', ()=> {
     expect(store.getState().things.sortType).toBe('status');
   });
 
+  it('sets sort state done if already set to null and done clicked', ()=> {
+    const store = testStore({
+      things: {sortOpen: true, sortType: null}
+    });
+    const wrapper = unwrappedShallow(<Sort store={store} />);
+
+    wrapper.find(DropdownItem)
+      .findWhere((item)=> item.prop('id') === 'done')
+      .prop('onClick')();
+
+    expect(store.getState().things.sortType).toBe('done');
+  });
+
+  it('sets sort state pending if already set to null and pending clicked',
+    ()=> {
+      const store = testStore({
+        things: {sortOpen: true, sortType: null}
+      });
+      const wrapper = unwrappedShallow(<Sort store={store} />);
+
+      wrapper.find(DropdownItem)
+        .findWhere((item)=> item.prop('id') === 'pending')
+        .prop('onClick')();
+
+      expect(store.getState().things.sortType).toBe('pending');
+    });
+
   it('sets sort state due if already set to null and due clicked', ()=> {
     const store = testStore({
       things: {sortOpen: true, sortType: null}
@@ -131,6 +158,33 @@ describe('<Sort />', ()=> {
 
     expect(store.getState().things.sortType).toBe(null);
   });
+
+  it('sets sort state null if already set to done and done clicked', ()=> {
+    const store = testStore({
+      things: {sortOpen: true, sortType: 'done'}
+    });
+    const wrapper = unwrappedShallow(<Sort store={store} />);
+
+    wrapper.find(DropdownItem)
+      .findWhere((item)=> item.prop('id') === 'done')
+      .prop('onClick')();
+
+    expect(store.getState().things.sortType).toBe(null);
+  });
+
+  it('sets sort state null if already set to pending and pending clicked',
+    ()=> {
+      const store = testStore({
+        things: {sortOpen: true, sortType: 'pending'}
+      });
+      const wrapper = unwrappedShallow(<Sort store={store} />);
+
+      wrapper.find(DropdownItem)
+        .findWhere((item)=> item.prop('id') === 'pending')
+        .prop('onClick')();
+
+      expect(store.getState().things.sortType).toBe(null);
+    });
 
   it('sets sort state null if already set to due and due clicked', ()=> {
     const store = testStore({

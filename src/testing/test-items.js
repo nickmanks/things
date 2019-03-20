@@ -23,7 +23,7 @@ export default {
     due: 500000,
     archived: false,
     archivedDate: null,
-    status: 'in progress'
+    status: 'pending'
   },
   ['test-id-3']: {
     id: 'test-id-3',
@@ -34,7 +34,7 @@ export default {
     due: 200000,
     archived: false,
     archivedDate: null,
-    status: 'ready'
+    status: 'pending'
   },
   ['test-id-4']: {
     id: 'test-id-4',
@@ -67,7 +67,7 @@ export default {
     due: 1000,
     archived: true,
     archivedDate: 7000000,
-    status: 'ready'
+    status: 'pending'
   },
   ['test-id-7']: {
     id: 'test-id-7',
@@ -78,6 +78,28 @@ export default {
     due: 1000,
     archived: true,
     archivedDate: 4000000,
-    status: 'in progress'
+    status: 'done'
+  },
+  ['test-id-8']: {
+    id: 'test-id-8',
+    name: 'Create a thing',
+    category: 'create',
+    description: 'dadasdasd.',
+    created: 1000,
+    due: null,
+    archived: true,
+    archivedDate: 4000000,
+    status: 'done'
+  },
+  ['test-id-9']: {
+    id: 'test-id-9',
+    name: 'Create a thing',
+    category: 'create',
+    description: 'dadasdasd.',
+    created: 100000,
+    due: null,
+    archived: true,
+    archivedDate: 4000000,
+    status: 'done'
   }
 };

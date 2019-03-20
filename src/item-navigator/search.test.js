@@ -113,9 +113,11 @@ describe('Sorting searched items', ()=> {
       {item: testItems['test-id-4']},
       {item: testItems['test-id-5']},
       {item: testItems['test-id-7']},
+      {item: testItems['test-id-8']},
+      {item: testItems['test-id-9']},
       {item: testItems['test-id-2']},
-      {item: testItems['test-id-6']},
-      {item: testItems['test-id-3']}
+      {item: testItems['test-id-3']},
+      {item: testItems['test-id-6']}
     ]);
   });
 
@@ -125,16 +127,16 @@ describe('Sorting searched items', ()=> {
 
     const sortFn = sortItems('newest');
 
-    // console.log(testItemsArray.sort(sortFn));
-
     expect(testItemsArray.sort(sortFn)).toEqual([
       {item: testItems['test-id-1']},
       {item: testItems['test-id-2']},
       {item: testItems['test-id-3']},
+      {item: testItems['test-id-9']},
       {item: testItems['test-id-4']},
       {item: testItems['test-id-5']},
       {item: testItems['test-id-6']},
-      {item: testItems['test-id-7']}
+      {item: testItems['test-id-7']},
+      {item: testItems['test-id-8']}
     ]);
   });
 
@@ -149,6 +151,8 @@ describe('Sorting searched items', ()=> {
       {item: testItems['test-id-5']},
       {item: testItems['test-id-6']},
       {item: testItems['test-id-7']},
+      {item: testItems['test-id-8']},
+      {item: testItems['test-id-9']},
       {item: testItems['test-id-3']},
       {item: testItems['test-id-2']},
       {item: testItems['test-id-1']}
@@ -168,7 +172,9 @@ describe('Sorting searched items', ()=> {
       {item: testItems['test-id-7']},
       {item: testItems['test-id-3']},
       {item: testItems['test-id-2']},
-      {item: testItems['test-id-1']}
+      {item: testItems['test-id-1']},
+      {item: testItems['test-id-9']},
+      {item: testItems['test-id-8']}
     ]);
   });
 
@@ -182,6 +188,8 @@ describe('Sorting searched items', ()=> {
     expect(testItemsArray.sort(sortFn)).toEqual([
       {item: testItems['test-id-5']},
       {item: testItems['test-id-7']},
+      {item: testItems['test-id-8']},
+      {item: testItems['test-id-9']},
       {item: testItems['test-id-6']}
     ]);
   });

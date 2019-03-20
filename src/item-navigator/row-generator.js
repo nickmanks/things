@@ -11,7 +11,7 @@ const getColumnItems = (itemA, itemB, itemC, itemD)=> {
   if (!itemB) {
     return (
       <Fragment>
-        <Col>
+        <Col key={itemA.id}>
           <Item item={itemA} />
         </Col>
         <Col>
@@ -23,10 +23,10 @@ const getColumnItems = (itemA, itemB, itemC, itemD)=> {
   if (!itemC) {
     return (
       <Fragment>
-        <Col>
+        <Col key={itemA.id}>
           <Item item={itemA} />
         </Col>
-        <Col>
+        <Col key={itemB.id}>
           <Item item={itemB} />
         </Col>
         <Col>
@@ -38,13 +38,13 @@ const getColumnItems = (itemA, itemB, itemC, itemD)=> {
   if (!itemD) {
     return (
       <Fragment>
-        <Col>
+        <Col key={itemA.id}>
           <Item item={itemA} />
         </Col>
-        <Col>
+        <Col key={itemB.id}>
           <Item item={itemB} />
         </Col>
-        <Col>
+        <Col key={itemC.id}>
           <Item item={itemC} />
         </Col>
         <Col>
@@ -56,16 +56,16 @@ const getColumnItems = (itemA, itemB, itemC, itemD)=> {
 
   return (
     <Fragment>
-      <Col>
+      <Col key={itemA.id}>
         <Item item={itemA} />
       </Col>
-      <Col>
+      <Col key={itemB.id}>
         <Item item={itemB} />
       </Col>
-      <Col>
+      <Col key={itemC.id}>
         <Item item={itemC} />
       </Col>
-      <Col>
+      <Col key={itemD.id}>
         <Item item={itemD} />
       </Col>
     </Fragment>

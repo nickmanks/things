@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {CardFooter, Badge} from 'shards-react';
 
 
-export const READY_STATUS = 'ready';
+export const PENDING_STATUS = 'pending';
 export const PROGRESS_STATUS = 'in progress';
 export const DONE_STATUS = 'done';
 
@@ -14,24 +14,13 @@ const ItemStatus = ({status, onUpdateStatus})=> (
       <Badge
         className={'item-status-pill'}
         pill
-        theme={status === READY_STATUS ? 'danger' : 'light'}
+        theme={status === PENDING_STATUS ? 'danger' : 'light'}
         onClick={(evt)=> {
           evt.stopPropagation();
-          onUpdateStatus(READY_STATUS);
+          onUpdateStatus(PENDING_STATUS);
         }}
       >
-        Ready
-      </Badge>
-      <Badge
-        className={'item-status-pill'}
-        pill
-        theme={status === PROGRESS_STATUS ? 'warning' : 'light'}
-        onClick={(evt)=> {
-          evt.stopPropagation();
-          onUpdateStatus(PROGRESS_STATUS);
-        }}
-      >
-        In Progress
+        Pending
       </Badge>
       <Badge
         className={'item-status-pill'}

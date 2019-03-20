@@ -13,9 +13,19 @@ const ItemBody = ({category, description, due})=> (
       </CardSubtitle>
     }
     <div>
-      <b>{category}</b>
+      <b>
+        {
+          category === null
+            ? 'Category'
+            : category
+        }
+      </b>
       <div className={'item-description'}>
-        {description}
+        {
+          description === null
+            ? 'Click here to edit my description, category and due date'
+            : description
+        }
       </div>
     </div>
     <div className={'item-body-bottom-fade'} />

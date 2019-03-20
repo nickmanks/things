@@ -24,13 +24,13 @@ describe('<OutlineItem />', ()=> {
     expect(Reflect.ownKeys(items).length).toBe(1);
     expect(items['test-id']).toEqual({
       id: 'test-id',
-      name: 'New Thing!',
-      description: 'Click here to edit my description, category and due date',
-      category: 'Category',
-      status: 'ready',
+      name: null,
+      description: null,
+      category: null,
+      status: 'pending',
       archived: false,
       archivedDate: null,
-      due: 100,
+      due: null,
       created: 100
     });
   });

@@ -6,12 +6,7 @@ exports[`Storyshots Simple/ItemStatus with done status 1`] = `
     <div className={"item-status"}>
       <Badge className={"item-status-pill"} pill={true} theme={"light"} onClick={"function"} outline={false} tag={"span"}>
         <span onClick={"function"} className={"item-status-pill badge badge-light badge-pill"}>
-          Ready
-        </span>
-      </Badge>
-      <Badge className={"item-status-pill"} pill={true} theme={"light"} onClick={"function"} outline={false} tag={"span"}>
-        <span onClick={"function"} className={"item-status-pill badge badge-light badge-pill"}>
-          In Progress
+          Pending
         </span>
       </Badge>
       <Badge className={"item-status-pill"} pill={true} theme={"success"} onClick={"function"} outline={false} tag={"span"}>
@@ -24,42 +19,13 @@ exports[`Storyshots Simple/ItemStatus with done status 1`] = `
 </CardFooter>
 `;
 
-exports[`Storyshots Simple/ItemStatus with in progress status 1`] = `
-<CardFooter tag={"div"}>
-  <div className={"card-footer"}>
-    <div className={"item-status"}>
-      <Badge className={"item-status-pill"} pill={true} theme={"light"} onClick={"function"} outline={false} tag={"span"}>
-        <span onClick={"function"} className={"item-status-pill badge badge-light badge-pill"}>
-          Ready
-        </span>
-      </Badge>
-      <Badge className={"item-status-pill"} pill={true} theme={"warning"} onClick={"function"} outline={false} tag={"span"}>
-        <span onClick={"function"} className={"item-status-pill badge badge-warning badge-pill"}>
-          In Progress
-        </span>
-      </Badge>
-      <Badge className={"item-status-pill"} pill={true} theme={"light"} onClick={"function"} outline={false} tag={"span"}>
-        <span onClick={"function"} className={"item-status-pill badge badge-light badge-pill"}>
-          Done
-        </span>
-      </Badge>
-    </div>
-  </div>
-</CardFooter>
-`;
-
-exports[`Storyshots Simple/ItemStatus with ready status 1`] = `
+exports[`Storyshots Simple/ItemStatus with pending status 1`] = `
 <CardFooter tag={"div"}>
   <div className={"card-footer"}>
     <div className={"item-status"}>
       <Badge className={"item-status-pill"} pill={true} theme={"danger"} onClick={"function"} outline={false} tag={"span"}>
         <span onClick={"function"} className={"item-status-pill badge badge-danger badge-pill"}>
-          Ready
-        </span>
-      </Badge>
-      <Badge className={"item-status-pill"} pill={true} theme={"light"} onClick={"function"} outline={false} tag={"span"}>
-        <span onClick={"function"} className={"item-status-pill badge badge-light badge-pill"}>
-          In Progress
+          Pending
         </span>
       </Badge>
       <Badge className={"item-status-pill"} pill={true} theme={"light"} onClick={"function"} outline={false} tag={"span"}>

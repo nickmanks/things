@@ -15,6 +15,8 @@ import './theme.scss';
 export const SORT_NEWEST = 'newest';
 export const SORT_OLDEST = 'oldest';
 export const SORT_STATUS = 'status';
+export const SORT_DONE = 'done';
+export const SORT_PENDING = 'pending';
 export const SORT_DUE = 'due';
 export const SORT_ARCHIVED = 'archived';
 
@@ -72,6 +74,20 @@ const SortDropdown = ({open, sortType, onSetSort, setOpen, mobile})=> (
         onClick={()=> onSetSort(sortType, SORT_STATUS)}
       >
         Status <CheckBox show={sortType === SORT_STATUS} />
+      </DropdownItem>
+      <DropdownItem
+        id='done'
+        className={'flex-dropdown'}
+        onClick={()=> onSetSort(sortType, SORT_DONE)}
+      >
+        Done <CheckBox show={sortType === SORT_DONE} />
+      </DropdownItem>
+      <DropdownItem
+        id='pending'
+        className={'flex-dropdown'}
+        onClick={()=> onSetSort(sortType, SORT_PENDING)}
+      >
+        Pending <CheckBox show={sortType === SORT_PENDING} />
       </DropdownItem>
       <DropdownItem
         id='archived'

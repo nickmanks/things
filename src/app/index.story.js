@@ -15,7 +15,8 @@ storiesOf('Connected/App', module)
         loaded: true,
         queued: [],
         processing: [],
-        done: []
+        done: [],
+        errors: []
       }
     });
 

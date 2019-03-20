@@ -49,19 +49,21 @@ export const sortItems = (sortType)=> {
       if (b.item.status === 'done') {
         return 1;
       }
-      if (a.item.status === 'in progress' && b.item.status === 'ready') {
-        return -1;
-      }
-      if (a.item.status === 'ready' && b.item.status === 'in progress') {
-        return 1;
-      }
 
-      return 1;
+      return -1;
     };
   }
 
   if (sortType === SORT_DUE) {
-    return (a, b)=> a.item.due - b.item.due;
+    return (a, b)=> {
+      if (a.item.due === null) {
+        return 1;
+      }
+      if (b.item.due === null) {
+        return -1;
+      }
+      return a.item.due - b.item.due;
+    };
   }
 
   if (sortType === SORT_ARCHIVED) {

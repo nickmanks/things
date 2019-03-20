@@ -1,4 +1,5 @@
 import React from 'react';
+import {act} from 'react-test-renderer';
 import {Card} from 'shards-react';
 import ItemHeader from './header';
 import ItemStatus from './status';
@@ -16,7 +17,11 @@ describe('<Item />', ()=> {
       <Item store={store} item={testItems['test-id-1']} />
     );
 
-    wrapper.find(ItemHeader).prop('onNameChange')('new name');
+    act(()=> {
+      wrapper.find(ItemHeader).prop('onNameChange')('new name');
+    });
+
+    jest.runAllTimers();
 
     expect(store.getState().things.items['test-id-1'].name).toBe('new name');
   });

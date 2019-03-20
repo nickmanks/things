@@ -6,15 +6,9 @@ import './theme.scss';
 
 
 storiesOf('Simple/ItemStatus', module)
-  .add('with ready status', ()=> (
+  .add('with pending status', ()=> (
     <ItemStatus
-      status={'ready'}
-      onUpdateStatus={()=> null}
-    />
-  ))
-  .add('with in progress status', ()=> (
-    <ItemStatus
-      status={'in progress'}
+      status={'pending'}
       onUpdateStatus={()=> null}
     />
   ))

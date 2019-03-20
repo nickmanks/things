@@ -11,18 +11,19 @@ import {
 import uuidV4 from 'uuid/v4';
 import {now} from '../utils/dates';
 import {updateItem, setSortType} from '../things/actions';
+import {PENDING_STATUS} from './status';
 import './theme.scss';
 
 
 const createNewItem = ()=> ({
   id: uuidV4(),
-  name: 'New Thing!',
-  description: 'Click here to edit my description, category and due date',
-  category: 'Category',
-  status: 'ready',
+  name: null,
+  description: null,
+  category: null,
+  status: PENDING_STATUS,
   archived: false,
   archivedDate: null,
-  due: now().getTime(),
+  due: null,
   created: now().getTime()
 });
 

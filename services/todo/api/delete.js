@@ -5,6 +5,9 @@
 
 const AWS = require('aws-sdk');
 const HTTP_BAD_GATEWAY = 501;
+const HTTP_BAD_SCHEMA = 422;
+const HTTP_BAD_DATA = 400;
+const HTTP_NOT_FOUND = 404;
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
@@ -17,9 +20,19 @@ module.exports.delete = (event, context, callback)=> {
     }
   };
 
-  // delete the todo from the database
+  if (!event.pathParameters.id) {
+    callback(null, {
+      statusCode: HTTP_NOT_FOUND,
+      headers: {
+        'Content-Type': 'text/plain',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: 'ID path parameter not found'
+    });
+    return;
+  }
+
   dynamoDb.delete(params, (error)=> {
-    // handle potential errors
     if (error) {
       console.error(error);
       callback(null, {
@@ -33,8 +46,7 @@ module.exports.delete = (event, context, callback)=> {
 
       return;
     }
-
-    // create a response
+    
     const response = {
       statusCode: 200,
       body: JSON.stringify({}),

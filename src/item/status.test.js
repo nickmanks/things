@@ -5,10 +5,10 @@ import {unwrappedShallow} from '../testing/helpers';
 
 
 describe('<ItemStatus />', ()=> {
-  it('updates the ready status', ()=> {
+  it('updates the pending status', ()=> {
     const updateFn = jest.fn();
     const wrapper = unwrappedShallow(
-      <ItemStatus status={'ready'} onUpdateStatus={updateFn} />
+      <ItemStatus status={'pending'} onUpdateStatus={updateFn} />
     );
     const evt = {
       stopPropagation: jest.fn()
@@ -19,24 +19,7 @@ describe('<ItemStatus />', ()=> {
       .prop('onClick')(evt);
 
     expect(evt.stopPropagation).toHaveBeenCalled();
-    expect(updateFn).toHaveBeenCalledWith('ready');
-  });
-
-  it('updates the in progress status', ()=> {
-    const updateFn = jest.fn();
-    const wrapper = unwrappedShallow(
-      <ItemStatus status={'in progress'} onUpdateStatus={updateFn} />
-    );
-    const evt = {
-      stopPropagation: jest.fn()
-    };
-
-    wrapper.find(Badge)
-      .findWhere((item)=> item.prop('theme') === 'warning')
-      .prop('onClick')(evt);
-
-    expect(evt.stopPropagation).toHaveBeenCalled();
-    expect(updateFn).toHaveBeenCalledWith('in progress');
+    expect(updateFn).toHaveBeenCalledWith('pending');
   });
 
   it('updates the done status', ()=> {

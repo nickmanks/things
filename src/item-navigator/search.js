@@ -7,7 +7,7 @@ import {
 } from '../app-bar/sort';
 
 
-// eslint-disable-next-line max-statements
+// eslint-disable-next-line max-statements, complexity
 export const scoreItems = (searchTerm)=> (item)=> {
   if (!searchTerm) {
     return {item, score: 1};
@@ -15,16 +15,16 @@ export const scoreItems = (searchTerm)=> (item)=> {
 
   const search = searchTerm.toLowerCase();
 
-  if (item.name.toLowerCase().includes(search)) {
+  if (item.name && item.name.toLowerCase().includes(search)) {
     return {item, score: 10};
   }
-  if (item.category.toLowerCase().includes(search)) {
+  if (item.category && item.category.toLowerCase().includes(search)) {
     return {item, score: 5};
   }
-  if (item.status.toLowerCase().includes(search)) {
+  if (item.status && item.status.toLowerCase().includes(search)) {
     return {item, score: 5};
   }
-  if (item.description.toLowerCase().includes(search)) {
+  if (item.description && item.description.toLowerCase().includes(search)) {
     return {item, score: 1};
   }
 
